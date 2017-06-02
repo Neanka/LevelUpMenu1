@@ -1,0 +1,91 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Sprites_o/Sprite 172" itemID="591c88da-000003d4" linkageExportForAS="true" linkageExportForRS="true" linkageIdentifier="PerkClip4d88d" linkageClassName="PerkClip4d88d" sourceFlashFilepath="Sprite 172" lastModified="1495042266" sourceItemID="00000000-ffffffff">
+  <timeline>
+    <DOMTimeline name="Sprite 172">
+      <layers>
+        <DOMLayer name="Layer 2" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" duration="26" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites_o/Sprite 5" name="border">
+                  <matrix>
+                    <Matrix a="4.3309326171875" d="3.09011840820313" tx="-202" ty="-175"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 1" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Shapes_o/Shape 165" symbolType="graphic" loop="single frame">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" duration="3" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Shapes_o/Shape 166" symbolType="graphic" loop="single frame">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="4" duration="3" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Shapes_o/Shape 167" symbolType="graphic" loop="single frame">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="7" duration="6" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Shapes_o/Shape 168" symbolType="graphic" loop="single frame">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" duration="4" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Shapes_o/Shape 169" symbolType="graphic" loop="single frame">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="17" duration="6" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Shapes_o/Shape 170" symbolType="graphic" loop="single frame">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="23" duration="3" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Shapes_o/Shape 171" symbolType="graphic" loop="single frame">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,57 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Shapes/Shape 766" itemID="591c88da-0000018a" symbolType="graphic" lastModified="1495042266">
+  <timeline>
+    <DOMTimeline name="Shape 766">
+      <layers>
+        <DOMLayer name="Shape Sublayer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#FF4000"/>
+                    </FillStyle>
+                    <FillStyle index="3">
+                      <SolidColor color="#B2B2B2"/>
+                    </FillStyle>
+                    <FillStyle index="4">
+                      <SolidColor color="#666666"/>
+                    </FillStyle>
+                    <FillStyle index="5">
+                      <SolidColor color="#BF0000"/>
+                    </FillStyle>
+                    <FillStyle index="6">
+                      <SolidColor color="#D4D4D4"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!-1014 336|-1002 346!-1002 346|-1001 348!-1001 348|-1001 347!-1001 347|-999 350!-999 350|-997 352!-997 352|-990 355!-990 355|-969 365!-969 365|-963 368!-963 368|-962 367!-962 367|-948 367!-948 367|-936 357!-936 357|-932 338!-932 338[-932
+ 327 -940 320!-940 320|-950 316!-950 316|-967 313!-967 313|-985 311!-985 311|-988 311!-988 311|-991 311!-991 311|-998 312!-998 312|-1009 314!-1009 314|-1017 321!-1017 321|-1014 336"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="
+!-1016 323|-1003 322!-1003 322|-1006 332!-1006 332|-1004 342!-1004 342|-1015 330!-1015 330|-1016 323"/>
+                    <Edge fillStyle0="1" fillStyle1="3" edges="
+!-971 326|-993 321!-993 321|-1000 320!-1000 320|-998 318!-998 318|-990 319!-990 319|-969 324!-969 324|-971 326"/>
+                    <Edge fillStyle0="1" fillStyle1="4" edges="
+!-971 314|-958 317!-958 317|-967 321!-967 321|-990 316!-990 316|-994 316!-994 316|-992 313!-992 313|-985 312!-985 312|-971 314"/>
+                    <Edge fillStyle0="1" fillStyle1="5" edges="
+!-998 315|-1000 315!-1000 315|-1014 320!-1014 320|-1000 314!-1000 314|-996 313!-996 313|-998 315!-1006 319|-1001 318!-1001 318|-1002 320!-1002 320|-1006 319"/>
+                    <Edge fillStyle0="1" fillStyle1="6" edges="
+!-1002 323|-994 324!-994 324|-973 329!-973 329|-977 345!-977 345|-972 360!-972 360|-993 350!-993 350|-1001 345!-1001 345|-1001 344!-1001 344|-1004 333!-1004 333|-1002 323"/>
+                    <Edge fillStyle0="1" fillStyle1="3" edges="
+!-976 349|-972 330!-972 330|-960 319!-960 319|-944 320!-944 320[-935 325 -934 336!-934 336[-932 346 -937 355!-937 355[-941 363 -949 365!-949 365|-965 364!-965 364|-976 349!-957 339|-959 345!-959 345|-957 352!-957 352|-951 353!-951 353
+|-945 349!-945 349|-943 342!-943 342|-946 336!-946 336|-952 334!-952 334|-957 338!-957 338|-957 339"/>
+                    <Edge fillStyle0="1" fillStyle1="4" edges="
+!-947 338[-942 341 -945 348!-945 348|-949 351!-949 351|-954 350!-954 350|-957 340!-957 340|-947 338"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

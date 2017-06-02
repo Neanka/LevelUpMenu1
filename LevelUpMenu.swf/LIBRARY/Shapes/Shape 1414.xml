@@ -1,0 +1,28 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Shapes/Shape 1414" itemID="591c88da-000006a9" symbolType="graphic" lastModified="1495042266">
+  <timeline>
+    <DOMTimeline name="Shape 1414">
+      <layers>
+        <DOMLayer name="Shape Sublayer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#14FE7B"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!-1302 134[-1213 189 -1127 140!-1127 140[-1164 125 -1278 89!-1278 89[-1375 58 -1436 29!-1436 29[-1447 25 -1451 33!-1451 33[-1399 57 -1302 134!-1311 611[-1269 602 -1233 566!-1233 566[-1264 530 -1320 547!-1320 547[-1386 568 -1410 558!-1410
+ 558|-1569 577!-1569 577|-1479 591!-1479 591|-1393 610!-1393 610[-1346 618 -1311 611!-1253 938|-1289 954!-1289 954[-1378 993 -1416 1058!-1416 1058[-1412 1067 -1405 1064!-1405 1064|-1265 1000!-1265 1000[-1175 960 -1151 888!-1151 888[-1164
+ 898 -1243 934!-1243 934|-1243 938!-1243 938|-1253 938"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

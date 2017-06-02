@@ -1,0 +1,43 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Символ 2" itemID="592058dd-000007af" lastModified="1495292331">
+  <timeline>
+    <DOMTimeline name="Символ 2">
+      <layers>
+        <DOMLayer name="Слой 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#FFFFFF"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge strokeStyle="1" edges="!20 -39|5320 -39!5320 -39|5320 6380!5320 6380|20 6380!20 6380|20 -39"/>
+                  </edges>
+                </DOMShape>
+                <DOMDynamicText selected="true" fontRenderingMode="device" width="100" height="15.8" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="46" ty="91.45"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>perk list placeholder</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" useScreenSpacing="true" lineHeight="15.8" bitmapSize="240" face="$MAIN_Font*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

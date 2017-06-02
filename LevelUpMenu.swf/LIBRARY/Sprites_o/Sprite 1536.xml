@@ -1,0 +1,121 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Sprites_o/Sprite 1536" itemID="591c88da-00000618" linkageExportForAS="true" linkageExportForRS="true" linkageIdentifier="PerkClipca99d" linkageClassName="PerkClipca99d" sourceFlashFilepath="Sprite 1536" lastModified="1495042266" sourceItemID="00000000-ffffffff">
+  <timeline>
+    <DOMTimeline name="Sprite 1536">
+      <layers>
+        <DOMLayer name="Layer 9" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" duration="121" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites_o/Sprite 5" name="border">
+                  <matrix>
+                    <Matrix a="4.6002197265625" d="3.3453369140625" tx="-215.55" ty="-174.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 6" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" duration="31" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="31" duration="90" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites_o/Sprite 1530">
+                  <matrix>
+                    <Matrix ty="-0.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 4" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Shapes_o/Shape 1525" symbolType="graphic" loop="single frame">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" duration="30" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Shapes_o/Shape 1526" symbolType="graphic" loop="single frame">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="31" duration="2" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="33" duration="88" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites_o/Sprite 1535">
+                  <matrix>
+                    <Matrix tx="-88.1" ty="-120.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 3" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" duration="31" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="31" duration="2" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Shapes_o/Shape 1527" symbolType="graphic" loop="single frame">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="33" duration="88" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Shapes_o/Shape 1531" symbolType="graphic" loop="single frame">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 1" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" duration="121" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites_o/Sprite 93">
+                  <matrix>
+                    <Matrix a="2.04150390625" d="2.04150390625" tx="-182.05" ty="-160.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

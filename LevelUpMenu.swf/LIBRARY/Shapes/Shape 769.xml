@@ -1,0 +1,29 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Shapes/Shape 769" itemID="591c88da-0000018b" symbolType="graphic" lastModified="1495042266">
+  <timeline>
+    <DOMTimeline name="Shape 769">
+      <layers>
+        <DOMLayer name="Shape Sublayer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFFFFF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!-3792 -3003[-3907 -3003 -4102 -3099!-4102 -3099[-4266 -3179 -4315 -3228!-4315 -3228|-4305 -3240!-4305 -3240|-4297 -3247!-4297 -3247[-4231 -3198 -4078 -3143!-4078 -3143[-3865 -3067 -3774 -3024!-3774 -3024|-3770 -3010!-3770 -3010[-3769
+ -3003 -3792 -3003!-4122 -2541[-4000 -2529 -3937 -2504!-3937 -2504|-3933 -2489!-3933 -2489[-3932 -2482 -3955 -2482!-3955 -2482|-4136 -2494!-4136 -2494|-4345 -2512!-4345 -2512[-4281 -2557 -4122 -2541!-4224 -2095[-4293 -2095 -4300 -2110
+!-4300 -2110[-4288 -2134 -4159 -2168!-4159 -2168|-3978 -2204!-3978 -2204|-3967 -2193!-3967 -2193[-3998 -2170 -4076 -2136!-4076 -2136[-4172 -2095 -4224 -2095!-4375 -2932[-4302 -2938 -4145 -2897!-4145 -2897|-3865 -2821!-3865 -2821|-3864
+ -2808!-3864 -2808[-3862 -2797 -3899 -2797!-3899 -2797[-3978 -2797 -4174 -2853!-4174 -2853|-4375 -2913!-4375 -2913|-4375 -2932"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

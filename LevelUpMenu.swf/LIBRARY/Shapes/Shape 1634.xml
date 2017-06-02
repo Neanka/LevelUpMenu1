@@ -1,0 +1,47 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Shapes/Shape 1634" itemID="591c88da-000005b7" symbolType="graphic" lastModified="1495042266">
+  <timeline>
+    <DOMTimeline name="Shape 1634">
+      <layers>
+        <DOMLayer name="Shape Sublayer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#D4D4D4"/>
+                    </FillStyle>
+                    <FillStyle index="3">
+                      <SolidColor color="#B2B2B2"/>
+                    </FillStyle>
+                    <FillStyle index="4">
+                      <SolidColor color="#666666"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!1807 1848|1794 1859!1794 1859|1783 1872!1783 1872|1776 1888!1776 1888|1774 1903!1774 1903[1775 1917 1779 1919!1779 1919|1996 2037!1996 2037|2005 2036!2005 2036|2014 2031!2014 2031|2035 2006!2035 2006|2043 1977!2043 1977[2046 1964 2037
+ 1960!2037 1960|1820 1848!1820 1848|1807 1848"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="
+!1785 1914|1784 1919!1784 1919|1782 1918!1782 1918|1781 1909!1781 1909[1778 1900 1784 1886!1784 1886[1789 1872 1797 1863!1797 1863|1809 1854!1809 1854|1817 1853!1817 1853|1819 1856!1819 1856[1812 1857 1803 1864!1803 1864|1786 1890!1786
+ 1890|1784 1913!1784 1913|1785 1914"/>
+                    <Edge fillStyle0="1" fillStyle1="3" edges="
+!1785 1914[1784 1906 1789 1889!1789 1889[1794 1876 1805 1866!1805 1866[1813 1857 1822 1858!1822 1858|1866 1876!1866 1876|1854 1885!1854 1885|1838 1908!1838 1908[1830 1920 1829 1937!1829 1937|1830 1941!1830 1941|1790 1919!1790 1919|1785
+ 1914"/>
+                    <Edge fillStyle0="1" fillStyle1="4" edges="
+!1870 1878|2027 1960!2027 1960|2016 1968!2016 1968|1998 1993!1998 1993[1992 2007 1992 2019!1992 2019[1990 2023 1991 2025!1991 2025|1832 1942!1832 1942|1832 1935!1832 1935|1838 1909!1838 1909|1856 1887!1856 1887|1864 1881!1864 1881|1870
+ 1881!1870 1881|1870 1878"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="
+!2036 1966|2038 1975!2038 1975|2029 2001!2029 2001|2011 2025!2011 2025|2003 2030!2003 2030|1998 2032!1998 2032|1994 2021!1994 2021[1996 2009 2004 1995!2004 1995|2020 1971!2020 1971[2025 1965 2029 1966!2029 1966[2032 1963 2036 1966"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

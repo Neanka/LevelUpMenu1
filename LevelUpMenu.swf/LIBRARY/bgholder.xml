@@ -1,0 +1,24 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="bgholder" itemID="591c9915-00000799" linkageExportForAS="true" linkageClassName="def_BG_Holder" lastModified="1495129566">
+  <timeline>
+    <DOMTimeline name="bgholder">
+      <layers>
+        <DOMLayer name="Слой 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Shapes_o/Shape 147" selected="true" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="4.91664123535156" d="13.3695678710938"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="120" y="23"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,88 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Sprites/Sprite 1952" itemID="591c88d9-0000046d" linkageExportForAS="true" linkageExportForRS="true" linkageIdentifier="LevelUpMenu" linkageClassName="LevelUpMenu" sourceFlashFilepath="Sprite 1952" lastModified="1495047593" sourceItemID="00000000-ffffffff">
+  <timeline>
+    <DOMTimeline name="Sprite 1952">
+      <layers>
+        <DOMLayer name="Layer 836" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 144" name="ButtonHintBar_mc">
+                  <matrix>
+                    <Matrix tx="639.85" ty="661.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 827" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 1951" name="PerkInfo_mc">
+                  <matrix>
+                    <Matrix tx="-12.95" ty="511.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 821" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 149" name="XPMeterHolder_mc">
+                  <matrix>
+                    <Matrix tx="50" ty="645"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="bgholder" name="bgholder_mc">
+                  <matrix>
+                    <Matrix tx="60" ty="21.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="549.55" y="304.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Sprite 16 - копия" name="List_mc" selected="true">
+                  <matrix>
+                    <Matrix tx="102.05" ty="4.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="169.9" y="251.45"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 1" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 1944" name="GridView_mc" centerPoint3DX="1280">
+                  <matrix>
+                    <Matrix a="0.662338256835938" d="0.662338256835938" tx="1280"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,48 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Shapes/Shape 1757" itemID="591c88da-00000535" symbolType="graphic" lastModified="1495042266">
+  <timeline>
+    <DOMTimeline name="Shape 1757">
+      <layers>
+        <DOMLayer name="Shape Sublayer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#CC6600"/>
+                    </FillStyle>
+                    <FillStyle index="3">
+                      <SolidColor color="#B2B2B2"/>
+                    </FillStyle>
+                    <FillStyle index="4">
+                      <SolidColor color="#D4D4D4"/>
+                    </FillStyle>
+                    <FillStyle index="5">
+                      <SolidColor color="#FF9900"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" fillStyle1="3" edges="!2113 -2013|2151 -2054!2151 -2054|2160 -2056!2160 -2056|2186 -2044!2186 -2044|2209 -2019!2209 -2019|2216 -1997!2216 -1997|2175 -1952!2175 -1952|2168 -1967!2168 -1967[2166 -1981 2148 -1996!2148 -1996|2123 -2012!2123 -2012|2113 -2013"/>
+                    <Edge fillStyle0="1" fillStyle1="5" edges="!2120 -2008[2134 -2004 2148 -1992!2148 -1992|2166 -1966!2166 -1966[2176 -1955 2170 -1949!2170 -1949|2171 -1947!2171 -1947|2028 -1788!2028 -1788|2023 -1800!2023 -1800|2002 -1832!2002 -1832[1986 -1846 1972 -1849!1972 -1849|1965 -1851!1965
+ -1851|2111 -2011!2111 -2011[2112 -2010 2120 -2008"/>
+                    <Edge fillStyle0="1" fillStyle1="4" edges="
+!2152 -2059|2156 -2060!2156 -2060|2165 -2061!2165 -2061|2189 -2052!2189 -2052|2214 -2025!2214 -2025[2224 -2009 2219 -2001!2219 -2001|2218 -2000!2218 -2000|2211 -2021!2211 -2021|2187 -2046!2187 -2046[2172 -2058 2159 -2058!2159 -2058|2152
+ -2059"/>
+                    <Edge fillStyle0="1" edges="
+!2153 -2063|1951 -1849!1951 -1849[1943 -1841 1953 -1823!1953 -1823|1979 -1793!1979 -1793[1993 -1780 2006 -1774!2006 -1774[2021 -1770 2028 -1778!2028 -1778|2225 -1999!2225 -1999[2231 -2011 2220 -2029!2220 -2029[2209 -2048 2190 -2060!2190
+ -2060[2184 -2065 2174 -2066!2174 -2066|2153 -2063"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="
+!2021 -1801[2027 -1787 2022 -1780!2022 -1780|2008 -1780!2008 -1780|1981 -1800!1981 -1800|1960 -1827!1960 -1827[1950 -1840 1955 -1846!1955 -1846|1970 -1847!1970 -1847[1984 -1842 1999 -1826!1999 -1826|2021 -1801"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,41 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Shapes_o/Shape 933" itemID="591c88da-000000ed" symbolType="graphic" lastModified="1495042266">
+  <timeline>
+    <DOMTimeline name="Shape 933">
+      <layers>
+        <DOMLayer name="Shape Sublayer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <LinearGradient>
+                        <matrix>
+                          <Matrix a="0.1112060546875" d="-0.1112060546875" tx="-0.35" ty="-0.5"/>
+                        </matrix>
+                        <GradientEntry color="#F05A28" ratio="0"/>
+                        <GradientEntry color="#BF0000" ratio="0.862745098039216"/>
+                        <GradientEntry color="#FFFC00" ratio="1"/>
+                      </LinearGradient>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!-1637 299|-1409 254!-1409 254|-1522 273!-1522 273|-1331 234!-1331 234|-1498 260!-1498 260|-1162 190!-1162 190|-339 29!-339 29[-207 8 94 -64!94 -64[384 -125 611 -125!611 -125|900 -119!900 -119[1096 -111 1199 -114!1199 -114[1266 -117 1319
+ -165!1319 -165[1351 -194 1419 -286!1419 -286[1481 -359 1588 -382!1588 -382|1770 -398!1770 -398|1781 -405!1781 -405[1792 -406 1789 -381!1789 -381|1796 -349!1796 -349|1815 -324!1815 -324|1807 -301!1807 -301|1707 -299!1707 -299|1629 -291
+!1629 -291[1574 -283 1532 -263!1532 -263[1513 -257 1488 -226!1488 -226|1438 -160!1438 -160[1359 -62 1246 -33!1246 -33|1072 -25!1072 -25|667 -42!667 -42|566 -44!566 -44|305 -29!305 -29|-71 41!-71 41|-511 128!-511 128|-938.5 209"/>
+                    <Edge fillStyle0="1" fillStyle1="1" edges="
+!-938.5 209|-1065.5 234.5!-1065.5 234.5|-1829 385"/>
+                    <Edge fillStyle1="1" edges="
+!-938.5 209|-811.5 182!-811.5 182|-990 214!-990 214|-1387.5 284.5!-1387.5 284.5[#FFFE65.96 #5A.DC -311 58!-311 58|-955 179!-955 179|-1637 299"/>
+                    <Edge fillStyle0="1" fillStyle1="1" edges="
+!-811.5 182|-278 78!-1637 299|-1713 313!-1784 359|-1387.5 284.5"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

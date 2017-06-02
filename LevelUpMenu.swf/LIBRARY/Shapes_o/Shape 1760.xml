@@ -1,0 +1,42 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Shapes_o/Shape 1760" itemID="591c88da-00000537" symbolType="graphic" lastModified="1495042266">
+  <timeline>
+    <DOMTimeline name="Shape 1760">
+      <layers>
+        <DOMLayer name="Shape Sublayer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#CC6600"/>
+                    </FillStyle>
+                    <FillStyle index="3">
+                      <SolidColor color="#FF9900"/>
+                    </FillStyle>
+                    <FillStyle index="4">
+                      <SolidColor color="#B2B2B2"/>
+                    </FillStyle>
+                    <FillStyle index="5">
+                      <SolidColor color="#D4D4D4"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" fillStyle1="3" edges="!2810 -4|2817 12!2817 12|2813 29!2813 29[2814 37 2809 37!2809 37|2809 39!2809 39|2694 50!2694 50|2696 44!2696 44|2699 23!2699 23[2698 12 2693 7!2693 7|2691 3!2691 3|2808 -8!2808 -8|2810 -4"/>
+                    <Edge fillStyle0="1" fillStyle1="4" edges="!2808 -9|2839 -12!2839 -12|2844 -9!2844 -9|2850 5!2850 5|2850 24!2850 24|2845 35!2845 35|2811 38!2811 38[2816 36 2814 30!2814 30[2819 23 2817 11!2817 11|2813 -4!2813 -4|2808 -9"/>
+                    <Edge fillStyle0="1" fillStyle1="5" edges="!2842 -14|2844 -12!2844 -12|2847 -9!2847 -9|2854 3!2854 3|2854 23!2854 23|2847 35!2847 35|2852 23!2852 23|2851 5!2851 5|2843 -11!2843 -11|2842 -14"/>
+                    <Edge fillStyle0="1" edges="!2844 -15|2685 -2!2685 -2[2679 -1 2676 9!2676 9|2676 31!2676 31|2680 49!2680 49|2690 55!2690 55|2849 38!2849 38|2857 23!2857 23|2857 1!2857 1|2852 -8!2852 -8|2844 -15"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!2696 43|2689 52!2689 52|2683 47!2683 47|2680 29!2680 29|2680 10!2680 10|2685 1!2685 1|2692 6!2692 6|2696 24!2696 24|2696 43"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>
