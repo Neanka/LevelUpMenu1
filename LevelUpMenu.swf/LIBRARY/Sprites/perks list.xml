@@ -1,10 +1,10 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Sprites/skills list" itemID="59201250-000007ab" lastModified="1496757619">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Sprites/perks list" itemID="59367a42-000007a4" linkageExportForAS="true" linkageClassName="Perks_List" lastModified="1496757704">
   <timeline>
-    <DOMTimeline name="skills list">
+    <DOMTimeline name="perks list">
       <layers>
-        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+        <DOMLayer name="Слой 1" color="#4F80FF" current="true" isSelected="true">
           <frames>
-            <DOMFrame index="0" keyMode="8704">
+            <DOMFrame index="0" keyMode="9728">
               <elements>
                 <DOMSymbolInstance libraryItemName="Sprites/Sprite 2" name="border" selected="true">
                   <matrix>

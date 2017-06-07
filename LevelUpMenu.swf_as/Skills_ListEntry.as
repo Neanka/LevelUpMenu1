@@ -41,7 +41,7 @@ package
          _loc3_.blueOffset = !!this.selected?Number(-255):Number(0);
          this.DecrementArrow.transform.colorTransform = _loc3_;
 		 this.DecrementArrow.visible = (param1.value>param1.basevalue);
-		 this.IncrementArrow.visible = (LevelUpMenu.instance.SPCount>0);
+		 this.IncrementArrow.visible = (LevelUpMenu.instance.SPCount>0 && param1.value<100);
       }
    }
 }

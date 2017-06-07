@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Sprites_o/Sprite 1952" itemID="591c88d9-0000046d" linkageExportForAS="true" linkageExportForRS="true" linkageIdentifier="LevelUpMenu" linkageClassName="LevelUpMenu" sourceFlashFilepath="Sprite 1952" lastModified="1495293580" sourceItemID="00000000-ffffffff">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Sprites_o/Sprite 1952" itemID="591c88d9-0000046d" linkageExportForAS="true" linkageExportForRS="true" linkageIdentifier="LevelUpMenu" linkageClassName="LevelUpMenu" sourceFlashFilepath="Sprite 1952" lastModified="1496824021" sourceItemID="00000000-ffffffff">
   <timeline>
     <DOMTimeline name="Sprite 1952">
       <layers>
@@ -54,9 +54,9 @@
                     <Point x="549.55" y="304.1"/>
                   </transformationPoint>
                 </DOMSymbolInstance>
-                <DOMSymbolInstance libraryItemName="Sprites/skills list" name="List_mc">
+                <DOMSymbolInstance libraryItemName="Sprites/Skills_List" name="List_mc">
                   <matrix>
-                    <Matrix tx="846.4" ty="63.15"/>
+                    <Matrix tx="846.4" ty="111"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="169.9" y="251.45"/>
@@ -78,7 +78,7 @@
                     <Point/>
                   </transformationPoint>
                 </DOMSymbolInstance>
-                <DOMDynamicText name="Description_tf" selected="true" fontRenderingMode="device" width="376" height="202.85" isSelectable="false" renderAsHTML="true" lineType="multiline">
+                <DOMDynamicText name="Description_tf" fontRenderingMode="device" width="376" height="202.85" isSelectable="false" renderAsHTML="true" lineType="multiline">
                   <matrix>
                     <Matrix tx="452" ty="395.05"/>
                   </matrix>
@@ -117,6 +117,35 @@
                     </DOMTextRun>
                   </textRuns>
                 </DOMDynamicText>
+                <DOMSymbolInstance libraryItemName="Sprites/Skills_List" name="PerkList_mc">
+                  <matrix>
+                    <Matrix tx="90.15" ty="111"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="169.9" y="247.9"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMDynamicText name="spec_tf" fontRenderingMode="device" top="17.95" width="477.95" height="29" isSelectable="false" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="52" ty="584.05"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters></characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" useScreenSpacing="true" lineHeight="26.35" size="20" bitmapSize="400" face="$MAIN_Font*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+                <DOMSymbolInstance libraryItemName="def_cb" name="filterCb" selected="true">
+                  <matrix>
+                    <Matrix tx="284.05" ty="78"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="10" y="10"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
               </elements>
             </DOMFrame>
           </frames>

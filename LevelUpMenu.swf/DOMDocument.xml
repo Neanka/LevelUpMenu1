@@ -4,16 +4,18 @@
           <DOMFolderItem name="Shapes" itemID="591b119d-000000de"/>
           <DOMFolderItem name="Shapes_o" itemID="591ddb37-000026f0"/>
           <DOMFolderItem name="Sprites" itemID="591ddc17-00002711" isExpanded="true"/>
-          <DOMFolderItem name="Sprites_o" itemID="591ddb33-000026ef" isExpanded="true"/>
+          <DOMFolderItem name="Sprites_o" itemID="591ddb33-000026ef"/>
      </folders>
      <fonts>
-          <DOMFontItem name="$MAIN_Font" itemID="591c9397-00000794" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$MAIN_Font" linkageURL="fonts_en.swf" font="RobotoCondensed-Regular" size="0" id="1" sourceLastImported="1495045015" embedRanges="9999"/>
           <DOMFontItem name="$MAIN_Font_Bold" itemID="591c9678-00000797" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$MAIN_Font_Bold" linkageURL="fonts_en.swf" font="RobotoCondensed-Bold" size="0" id="2" sourceLastImported="1495045752" embedRanges="9999"/>
+          <DOMFontItem name="$MAIN_Font" itemID="591c9397-00000794" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$MAIN_Font" linkageURL="fonts_en.swf" font="RobotoCondensed-Regular" size="0" id="1" sourceLastImported="1495045015" embedRanges="9999"/>
      </fonts>
      <symbols>
           <Include href="Символ 1.xml" loadImmediate="false" itemID="591de4d4-0000277a" lastModified="1495131348"/>
           <Include href="Символ 2.xml" loadImmediate="false" itemID="592058dd-000007af" lastModified="1495292331"/>
           <Include href="bgholder.xml" itemID="591c9915-00000799" lastModified="1495129566"/>
+          <Include href="def_cb.xml" itemID="5937b349-000007a8" lastModified="1496824177"/>
+          <Include href="def_cb_button.xml" loadImmediate="false" itemID="5937b306-000007a5" lastModified="1496822592"/>
           <Include href="Morphs_o/Morph 1704.xml" loadImmediate="false" itemID="591c88da-00000569" lastModified="1495042266"/>
           <Include href="Morphs_o/Morph 1707.xml" loadImmediate="false" itemID="591c88da-0000056a" lastModified="1495042266"/>
           <Include href="Shapes_o/Shape 1.xml" itemIcon="1" loadImmediate="false" itemID="591c88da-000007d4" lastModified="1495042266"/>
@@ -1947,9 +1949,11 @@
           <Include href="Sprites_o/Sprite 1944.xml" itemID="591c88d9-0000046e" lastModified="1495046094"/>
           <Include href="Sprites_o/Sprite 1946.xml" loadImmediate="false" itemID="591c88da-000003f0" lastModified="1495042266"/>
           <Include href="Sprites_o/Sprite 1951.xml" loadImmediate="false" itemID="591c88da-000003ef" lastModified="1495042266"/>
-          <Include href="Sprites_o/Sprite 1952.xml" itemID="591c88d9-0000046d" lastModified="1495293580"/>
-          <Include href="Sprites/skills list.xml" itemID="59201250-000007ab" lastModified="1495274064"/>
-          <Include href="Sprites/skills list entry.xml" itemID="5920125e-000007ad" lastModified="1495274169"/>
+          <Include href="Sprites_o/Sprite 1952.xml" itemID="591c88d9-0000046d" lastModified="1496824021"/>
+          <Include href="Sprites/perks list.xml" itemID="59367a42-000007a4" lastModified="1496757704"/>
+          <Include href="Sprites/perks list entry.xml" itemID="59367b12-000007ab" lastModified="1496743105"/>
+          <Include href="Sprites/Skills_List.xml" itemID="5936b5d8-000007a5" lastModified="1496770553"/>
+          <Include href="Sprites/skills list entry.xml" itemID="5920125e-000007ad" lastModified="1496742729"/>
           <Include href="Sprites/Sprite 2.xml" loadImmediate="false" itemID="591b119d-000000d4" lastModified="1494946205"/>
           <Include href="Sprites/Sprite 6.xml" itemID="591b119d-000000db" lastModified="1495129244"/>
      </symbols>
@@ -1965,14 +1969,6 @@
                                                   <Point/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
-                                        <DOMSymbolInstance libraryItemName="Символ 2">
-                                             <matrix>
-                                                  <Matrix tx="112.55" ty="159.55"/>
-                                             </matrix>
-                                             <transformationPoint>
-                                                  <Point x="133.5" y="158.5"/>
-                                             </transformationPoint>
-                                        </DOMSymbolInstance>
                                    </elements>
                               </DOMFrame>
                          </frames>
@@ -1982,25 +1978,25 @@
      </timelines>
      <PrinterSettings/>
      <publishHistory>
-          <PublishItem publishSize="3584791" publishTime="1495292342"/>
-          <PublishItem publishSize="3584792" publishTime="1495292275"/>
-          <PublishItem publishSize="3584795" publishTime="1495292206"/>
-          <PublishItem publishSize="3584675" publishTime="1495292072"/>
-          <PublishItem publishSize="3584674" publishTime="1495291993"/>
-          <PublishItem publishSize="3584668" publishTime="1495291814"/>
-          <PublishItem publishSize="3584672" publishTime="1495291697"/>
-          <PublishItem publishSize="3584650" publishTime="1495291440"/>
-          <PublishItem publishSize="3584606" publishTime="1495290994"/>
-          <PublishItem publishSize="3584964" publishTime="1495290678"/>
-          <PublishItem publishSize="3584957" publishTime="1495290300"/>
-          <PublishItem publishSize="3526615" publishTime="1495290172"/>
-          <PublishItem publishSize="3526615" publishTime="1495290141"/>
-          <PublishItem publishSize="3584937" publishTime="1495290007"/>
-          <PublishItem publishSize="3584940" publishTime="1495289910"/>
-          <PublishItem publishSize="3584926" publishTime="1495289780"/>
-          <PublishItem publishSize="3584901" publishTime="1495289694"/>
-          <PublishItem publishSize="3584913" publishTime="1495289568"/>
-          <PublishItem publishSize="3584907" publishTime="1495289447"/>
-          <PublishItem publishSize="3584890" publishTime="1495288679"/>
+          <PublishItem publishSize="3586068" publishTime="1496824053"/>
+          <PublishItem publishSize="3586067" publishTime="1496824026"/>
+          <PublishItem publishSize="3586074" publishTime="1496823843"/>
+          <PublishItem publishSize="3586055" publishTime="1496823724"/>
+          <PublishItem publishSize="3586049" publishTime="1496823613"/>
+          <PublishItem publishSize="3586045" publishTime="1496823603"/>
+          <PublishItem publishSize="3586027" publishTime="1496823550"/>
+          <PublishItem publishSize="3586036" publishTime="1496823465"/>
+          <PublishItem publishSize="3586039" publishTime="1496823404"/>
+          <PublishItem publishSize="3586035" publishTime="1496823338"/>
+          <PublishItem publishSize="3585682" publishTime="1496774819"/>
+          <PublishItem publishSize="3585682" publishTime="1496774320"/>
+          <PublishItem publishSize="3585616" publishTime="1496774102"/>
+          <PublishItem publishSize="3585626" publishTime="1496773731"/>
+          <PublishItem publishSize="3585626" publishTime="1496773473"/>
+          <PublishItem publishSize="3585611" publishTime="1496773108"/>
+          <PublishItem publishSize="3585565" publishTime="1496772712"/>
+          <PublishItem publishSize="3585578" publishTime="1496772665"/>
+          <PublishItem publishSize="3585539" publishTime="1496772471"/>
+          <PublishItem publishSize="3585539" publishTime="1496772443"/>
      </publishHistory>
 </DOMDocument>

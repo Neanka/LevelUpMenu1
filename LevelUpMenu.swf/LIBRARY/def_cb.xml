@@ -1,0 +1,60 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="def_cb" itemID="5937b349-000007a8" linkageExportForAS="true" linkageClassName="def_controls_cb" lastModified="1496824177">
+  <timeline>
+    <DOMTimeline name="def_cb">
+      <layers>
+        <DOMLayer name="Слой 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#454545" alpha="0.0274509803921569"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#FFFFFF" alpha="0.0274509803921569"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" weight="2">
+                        <fill>
+                          <SolidColor color="#FFFFFF"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!-49 -60|1929 -60!1929 -60[1940 -60 1940 -41!1940 -41|1940 441!1940 441[1940 460 1929 460!1929 460|-49 460!-49 460[-60 460 -60 441!-60 441|-60 -41!-60 -41[-60 -60 -49 -60"/>
+                    <Edge fillStyle0="1" fillStyle1="2" strokeStyle="1" edges="!20 0|379 0!379 0[400 0 400 19!400 19|400 381!400 381[400 400 379 400!379 400|20 400!20 400[0 400 0 381!0 381|0 19!0 19[0 0 20 0"/>
+                  </edges>
+                </DOMShape>
+                <DOMSymbolInstance libraryItemName="def_cb_button" name="cb_x">
+                  <matrix>
+                    <Matrix tx="2.5" ty="2.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="7.5" y="7.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMDynamicText selected="true" fontRenderingMode="device" width="70.1" height="19.75" isSelectable="false" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="24.9" ty="-0.1"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Show all</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" useScreenSpacing="true" lineHeight="19.75" size="15" bitmapSize="300" face="$MAIN_Font*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

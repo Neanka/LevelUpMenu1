@@ -7,6 +7,7 @@
 	import Shared.PlatformChangeEvent;
 	import flash.display.MovieClip;
 	import flash.events.Event;
+	import flash.events.MouseEvent;
 	import flash.events.TimerEvent;
 	import flash.events.KeyboardEvent;
 	import flash.text.TextLineMetrics;
@@ -22,6 +23,7 @@
 	import flash.display.Loader;
 	import flash.display.DisplayObject;
 	import flash.ui.Keyboard;
+	import flash.geom.ColorTransform;
 
 	public class LevelUpMenu extends IMenu {
 	
@@ -29,6 +31,8 @@
 		private static var _instance:LevelUpMenu;
 		public var bgholder_mc: def_BG_Holder;
 		public var List_mc: BSScrollingList;
+		public var PerkList_mc: BSScrollingList;
+		public var spec_tf: TextField;
 		private var _SampleList: Array;
 		private var _SampleList1: Array;
 		public var freepoints_holder_mc: freepoints_holder;
@@ -36,9 +40,11 @@
 		public var Description_tf: TextField;
 		public var Reqs_tf: TextField;
 		public var atf: TextField;
-		private const SkillsClipNameMap:Array = ["Barter","Crafting","Energy Weapons","Explosives","Guns","LockPick","Medicine","Melee Weapons","Science","Sneak","Speech","Survival","Unarmed"];
+		private const SkillsClipNameMap:Array = ["Barter","Energy Weapons","Explosives","Guns","LockPick","Medicine","Melee Weapons","Repair","Science","Sneak","Speech","Survival","Unarmed"];
 		private var _VBLoader:Loader;
 		private var uiSPCount: uint;
+		private var uiPPCount: uint;
+		public var filterCb: def_controls_cb;
 
 		public var GridView_mc: PerkGrid;
 
@@ -107,6 +113,8 @@
 			addEventListener(BSScrollingList.SELECTION_CHANGE,this.onSelectionChange);
 			addEventListener(KeyboardEvent.KEY_DOWN,this.onMenuKeyDown);
 			addEventListener(ArrowButton.MOUSE_UP,this.onArrowClick);
+			addEventListener(ItemList.MOUSE_OVER, this.onListMouseOver);
+			filterCb.addEventListener(MouseEvent.CLICK, this.onCbClick);
 			//---
 			Extensions.enabled = true;
 			TextFieldEx.setTextAutoSize(this.XPMeterHolder_mc.textField, TextFieldEx.TEXTAUTOSZ_SHRINK);
@@ -116,13 +124,38 @@
 			this.__setProp_ButtonHintBar_mc_MenuObj_ButtonHintBar_mc_0();
 			this.__setProp_bgholder_mc_MenuObj_bgholder_mc_0();
 			this.__setProp_List_mc_MenuObj_List_mc_0();
+			this.__setProp_PerkList_mc_MenuObj_PerkList_mc_0();
+			 newlist1();
 			//---
+			
 		}
 		
       public static function get instance() : LevelUpMenu
       {
          return _instance;
       }
+	  
+		private function onListMouseOver(event:Event){
+			//if (!this.QuantityMenu_mc.opened){
+				if ((event.target == this.List_mc) && !(stage.focus == List_mc)){
+					stage.focus = this.List_mc;
+					this.PerkList_mc.selectedIndex = -1;
+				} else {
+					if ((event.target == this.PerkList_mc) && !(stage.focus == this.PerkList_mc)){
+						stage.focus = this.PerkList_mc;
+						this.List_mc.selectedIndex = -1;
+					};
+				};
+			//};
+		}
+		
+		private function onCbClick(event:Event){
+			filterCb.togglecheck();
+			this.PerkList_mc.filterer.itemFilter = filterCb.bChecked ? 3:1;
+			this.PerkList_mc.InvalidateData();
+		//	this.PerkList_mc.UpdateList();
+			this.PerkList_mc.selectedIndex = this.PerkList_mc.GetEntryFromClipIndex(0);
+		}
 
 		private function PopulateButtonBar(): void {
 			var _loc1_: Vector.<BSButtonHintData>= new Vector.<BSButtonHintData>();
@@ -149,6 +182,9 @@
 		//	this.List_mc.InvalidateData();
 		//	stage.focus = this.List_mc;
 		//	this.List_mc.selectedIndex = 0;
+			    var _loc3_:ColorTransform = this.XPMeterHolder_mc.transform.colorTransform;									//////////!!!!!!!!!!!!!!!!!!!!! CHECK THIS
+																															//////////!!!!!!!!!!!!!!!!!!!!! CHECK THIS
+         this.freepoints_holder_mc.transform.colorTransform = _loc3_;														//////////!!!!!!!!!!!!!!!!!!!!! CHECK THIS
 			//---
 		}
 		
@@ -177,6 +213,32 @@
 			this.SetButtons();
 		}
 
+		public function qqStart(param1: Array,param2: int, param3: int, param4: Array, param5: String): * {
+		//public function qqStart(param1: Array): * {
+			atrace("skillsrecieved");
+			trace("param2 "+ param2+ "   param3: "+param3);
+			trace("param5 "+ param5);
+			this.spec_tf.text = param5;
+			this.SPCount = param2;
+			this.PPCount = param3;
+			//GlobalFunc.SetText(this.freepoints_holder_mc.countField1, String(param1), false);
+			//this.SPCount = param1;
+			
+		this._SampleList = param1;
+		this._SampleList1 = param4;
+		
+		atrace("filling array finished");
+			this.List_mc.entryList = this._SampleList;
+			this.List_mc.InvalidateData();
+			stage.focus = this.List_mc;
+			this.List_mc.selectedIndex = -1;
+			this.PerkList_mc.entryList = this._SampleList1;
+			this.PerkList_mc.InvalidateData();
+			this.PerkList_mc.selectedIndex = 0;
+
+			this.SetButtons();
+
+		}
 		public function onCodeObjDestruction(): * {
 			this.GridView_mc.codeObj = null;
 			this.BGSCodeObj = null;
@@ -207,10 +269,18 @@
 		public function set SPCount(param1: uint): * {
 		GlobalFunc.SetText(this.freepoints_holder_mc.countField1, String(param1), false);
 			this.uiSPCount = param1;
-				this.AcceptButton.ButtonDisabled = param1!=0;
+				this.AcceptButton.ButtonDisabled = param1!=0 && PPCount ==0;
 		}
 		
-		
+		public function get PPCount(): uint {
+			return this.uiPPCount;
+		}
+
+		public function set PPCount(param1: uint): * {
+		GlobalFunc.SetText(this.freepoints_holder_mc.countField, String(param1), false);
+			this.uiPPCount = param1;
+				this.AcceptButton.ButtonDisabled = param1!=0 && SPCount ==0;
+		}
 
 		public function set ratio16x10(param1: Boolean): * {
 			this.GridView_mc.ratio16x10 = param1;
@@ -601,24 +671,54 @@
 				return;
 			}
 		}
+		function __setProp_PerkList_mc_MenuObj_PerkList_mc_0(): * {		
+			try {
+				this.PerkList_mc["componentInspectorSetting"] = true;
+			} catch (e: Error) {}
+			this.PerkList_mc.listEntryClass = "Perks_ListEntry";
+			this.PerkList_mc.numListItems = 13;
+			this.PerkList_mc.restoreListIndex = false;
+			this.PerkList_mc.textOption = "None";
+			this.PerkList_mc.verticalSpacing = 0;
+			try {
+				this.PerkList_mc["componentInspectorSetting"] = false;
+				return;
+			} catch (e: Error) {
+				return;
+			}
+		}
 		
       private function onSelectionChange(param1:Event) : *
       {
-	if (param1.target == this.List_mc){
+	/*if (param1.target == this.List_mc){
+	this.PerkList_mc.selectedIndex = -1;	
 	stage.focus = this.List_mc;
-	}
+	} else {
+	this.List_mc.selectedIndex = -1;
+	stage.focus = this.PerkList_mc;
+	}*/
          var _loc2_:URLRequest = null;
          var _loc3_:LoaderContext = null;
          if(this.List_mc.selectedEntry && this.List_mc.selectedEntry.description)
          {
             GlobalFunc.SetText(this.Description_tf,this.List_mc.selectedEntry.description,false);
-            _loc2_ = new URLRequest("Components/VaultBoys/Skills/" + this.SkillsClipNameMap[this.List_mc.selectedIndex] + ".swf");
+			GlobalFunc.SetText(this.Reqs_tf,"",false);
+            //_loc2_ = new URLRequest("Components/VaultBoys/Skills/" + this.SkillsClipNameMap[this.List_mc.selectedIndex] + ".swf");
+			_loc2_ = new URLRequest("Components/VaultBoys/Skills/" + this.List_mc.selectedEntry.qname + ".swf");
             _loc3_ = new LoaderContext(false,ApplicationDomain.currentDomain);
             this._VBLoader.contentLoaderInfo.addEventListener(Event.COMPLETE,this.onVBLoadComplete);
             this._VBLoader.load(_loc2_,_loc3_);
-         } else 
-         {
+         } else if (this.PerkList_mc.selectedEntry && this.PerkList_mc.selectedEntry.description)
+		 {
+			GlobalFunc.SetText(this.Description_tf,this.PerkList_mc.selectedEntry.description,false);
+			GlobalFunc.SetText(this.Reqs_tf,this.PerkList_mc.selectedEntry.reqs,true);
+			_loc2_ = new URLRequest("Components/VaultBoys/Perks/" + this.PerkList_mc.selectedEntry.qname + ".swf");
+            _loc3_ = new LoaderContext(false,ApplicationDomain.currentDomain);
+            this._VBLoader.contentLoaderInfo.addEventListener(Event.COMPLETE,this.onVBLoadComplete);
+            this._VBLoader.load(_loc2_,_loc3_);
+         } else {
             GlobalFunc.SetText(this.Description_tf,"",false);
+			GlobalFunc.SetText(this.Reqs_tf,"",false);
             if(this.VBHolder_mc.numChildren > 0)
             {
                this.VBHolder_mc.removeChildAt(0);
@@ -678,7 +778,7 @@
 	  atrace("value "+String(this.List_mc.selectedEntry.value));
 	  atrace("basevalue "+String(this.List_mc.selectedEntry.basevalue));
 	  atrace("param1 "+String(param1));
-		if (param1<0 && this.List_mc.selectedEntry.value>this.List_mc.selectedEntry.basevalue || param1 > 0 && this.uiSPCount > 0 )
+		if (param1<0 && this.List_mc.selectedEntry.value>this.List_mc.selectedEntry.basevalue || param1 > 0 && this.uiSPCount > 0 && this.List_mc.selectedEntry.value<100)
 			{
 				this.List_mc.selectedEntry.value +=param1;
 				this.SPCount-=param1

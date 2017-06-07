@@ -13,7 +13,24 @@
 		public var f4seinit: Boolean = false;
 		
 		public var Menu_mc: LevelUpMenu;
+		public var fortest: int =23;
 
+		public function fortest1(gst: String,gai: int):Boolean {
+		fortest = gai;
+		trace("gst: "+gst);
+		trace("gai: "+String(gai));
+			Log.info("fortest1 function called with 2 params");
+		}
+		
+		public function fortest2(gar: Array):Boolean {
+		trace("gar: "+gar)
+		for (var foo in gar){
+			for (var bar in gar[foo]){
+				trace(bar+": "+gar[foo][bar]);
+			};
+		};
+			Log.info("fortest2 function called with array");
+		}
 
 		public function rooot_levelup() {
 			Log.info("constructor starting")
@@ -38,7 +55,12 @@
       {
          return _instance;
       }
-
+	  
+      public function plugintest() : *
+      {
+         Log.info("plugintest called");
+      }
+	  
 		private function initialized(e: Event): void {
 			removeEventListener(F4SE_INITIALIZED, this.initialized);
 			Log.info("f4se initialized")

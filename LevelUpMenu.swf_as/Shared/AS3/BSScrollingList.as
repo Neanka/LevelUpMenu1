@@ -92,8 +92,9 @@
 			this.iPlatform = 1;
 			sa1 = new Option_Scrollbar1();
 			sa1.rotation = 90;
-			sa1.x -= 3;
-			this.sa1.Track_mc.width = this.border.height;	
+			sa1.x -= 7;
+			sa1.y += 13;
+			//this.sa1.Track_mc.width = 191;//this.border.height*this.border.scaleY;
 
 				if (this.ScrollUp != null){
 					this.ScrollUp.visible = false;
@@ -103,11 +104,6 @@
 				};			
 			this.addChild(sa1);
 			addEventListener(Option_Scrollbar1.VALUE_CHANGE, announceChangep);
-			if ((this.name == "ObjectivesList_mc") || (this.name == "ValueList_mc")){
-			//	this.sa1.Track_mc.width -= 40;	
-				this.sa1.Track_mc.height = 10;	
-				this.sa1.Thumb_mc.height = 10;	
-			}
 		}
 		private function announceChangep(e:Event):void {
 			this.scrollPosition = sa1.value;
@@ -462,7 +458,7 @@
 				};
 				this.bInitialized = true;
 				dispatchEvent(new Event(LIST_ITEMS_CREATED, true, true));
-			switch (int(Shared.myf.confXML["scroll_amount"][0].toString())){
+			/*switch (int(Shared.myf.confXML["scroll_amount"][0].toString())){
 				case -2: 
 					this.m_scroll_amount = int(this.numListItems/2);
 					break;
@@ -471,7 +467,7 @@
 					break;
 				default:
 					this.m_scroll_amount = int(Shared.myf.confXML["scroll_amount"][0].toString());
-			}
+			}*/
 			};
 		}
 		protected function GetNewListEntry(auiClipIndex:uint):BSScrollingListEntry{

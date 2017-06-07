@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Sprites/skills list entry" itemID="5920125e-000007ad" linkageExportForAS="true" linkageClassName="Skills_ListEntry" sourceFlashFilepath="../../SPECIALMenu/SPECIALMenu.swf.fla" sourceLibraryItemHRef="Sprites/Sprite 7" sourceLastModified="1494947430" lastModified="1495274169" sourceItemID="00000000-ffffffff">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Sprites/skills list entry" itemID="5920125e-000007ad" linkageExportForAS="true" linkageClassName="Skills_ListEntry" sourceFlashFilepath="../../SPECIALMenu/SPECIALMenu.swf.fla" sourceLibraryItemHRef="Sprites/Sprite 7" sourceLastModified="1494947430" lastModified="1496742729" sourceItemID="00000000-ffffffff">
   <timeline>
     <DOMTimeline name="skills list entry">
       <layers>
@@ -61,11 +61,11 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 3" color="#4F80FF">
+        <DOMLayer name="Layer 3" color="#4F80FF" current="true" isSelected="true">
           <frames>
             <DOMFrame index="0" keyMode="8704">
               <elements>
-                <DOMDynamicText name="textField" fontRenderingMode="device" width="176.65" height="24" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                <DOMDynamicText name="textField" selected="true" fontRenderingMode="device" width="176.65" height="24" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
                   <matrix>
                     <Matrix tx="24.35" ty="3"/>
                   </matrix>
@@ -88,7 +88,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+        <DOMLayer name="Layer 1" color="#4F80FF">
           <frames>
             <DOMFrame index="0" keyMode="8704">
               <elements>
