@@ -7,8 +7,8 @@
           <DOMFolderItem name="Sprites_o" itemID="591ddb33-000026ef"/>
      </folders>
      <fonts>
-          <DOMFontItem name="$MAIN_Font_Bold" itemID="591c9678-00000797" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$MAIN_Font_Bold" linkageURL="fonts_en.swf" font="RobotoCondensed-Bold" size="0" id="2" sourceLastImported="1495045752" embedRanges="9999"/>
           <DOMFontItem name="$MAIN_Font" itemID="591c9397-00000794" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$MAIN_Font" linkageURL="fonts_en.swf" font="RobotoCondensed-Regular" size="0" id="1" sourceLastImported="1495045015" embedRanges="9999"/>
+          <DOMFontItem name="$MAIN_Font_Bold" itemID="591c9678-00000797" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$MAIN_Font_Bold" linkageURL="fonts_en.swf" font="RobotoCondensed-Bold" size="0" id="2" sourceLastImported="1495045752" embedRanges="9999"/>
      </fonts>
      <symbols>
           <Include href="Символ 1.xml" loadImmediate="false" itemID="591de4d4-0000277a" lastModified="1495131348"/>
@@ -1949,7 +1949,7 @@
           <Include href="Sprites_o/Sprite 1944.xml" itemID="591c88d9-0000046e" lastModified="1495046094"/>
           <Include href="Sprites_o/Sprite 1946.xml" loadImmediate="false" itemID="591c88da-000003f0" lastModified="1495042266"/>
           <Include href="Sprites_o/Sprite 1951.xml" loadImmediate="false" itemID="591c88da-000003ef" lastModified="1495042266"/>
-          <Include href="Sprites_o/Sprite 1952.xml" itemID="591c88d9-0000046d" lastModified="1496824021"/>
+          <Include href="Sprites_o/Sprite 1952.xml" itemID="591c88d9-0000046d" lastModified="1497446205"/>
           <Include href="Sprites/perks list.xml" itemID="59367a42-000007a4" lastModified="1496757704"/>
           <Include href="Sprites/perks list entry.xml" itemID="59367b12-000007ab" lastModified="1496743105"/>
           <Include href="Sprites/Skills_List.xml" itemID="5936b5d8-000007a5" lastModified="1496770553"/>
@@ -1978,25 +1978,25 @@
      </timelines>
      <PrinterSettings/>
      <publishHistory>
+          <PublishItem publishSize="3586247" publishTime="1497445990"/>
+          <PublishItem publishSize="3586246" publishTime="1497445898"/>
+          <PublishItem publishSize="3586268" publishTime="1497445850"/>
+          <PublishItem publishSize="3586250" publishTime="1497445798"/>
+          <PublishItem publishSize="3586262" publishTime="1497445739"/>
+          <PublishItem publishSize="3586245" publishTime="1497445694"/>
+          <PublishItem publishSize="3586245" publishTime="1497445654"/>
+          <PublishItem publishSize="3586261" publishTime="1497445394"/>
+          <PublishItem publishSize="3586290" publishTime="1497445265"/>
+          <PublishItem publishSize="3586245" publishTime="1497444947"/>
+          <PublishItem publishSize="3586281" publishTime="1497444934"/>
+          <PublishItem publishSize="3586279" publishTime="1497444351"/>
+          <PublishItem publishSize="3526974" publishTime="1497444309"/>
+          <PublishItem publishSize="3586266" publishTime="1497444179"/>
+          <PublishItem publishSize="3586259" publishTime="1497444087"/>
+          <PublishItem publishSize="3586239" publishTime="1497444067"/>
+          <PublishItem publishSize="3586259" publishTime="1497443999"/>
+          <PublishItem publishSize="3586249" publishTime="1497443798"/>
+          <PublishItem publishSize="3586170" publishTime="1497443526"/>
           <PublishItem publishSize="3586068" publishTime="1496824053"/>
-          <PublishItem publishSize="3586067" publishTime="1496824026"/>
-          <PublishItem publishSize="3586074" publishTime="1496823843"/>
-          <PublishItem publishSize="3586055" publishTime="1496823724"/>
-          <PublishItem publishSize="3586049" publishTime="1496823613"/>
-          <PublishItem publishSize="3586045" publishTime="1496823603"/>
-          <PublishItem publishSize="3586027" publishTime="1496823550"/>
-          <PublishItem publishSize="3586036" publishTime="1496823465"/>
-          <PublishItem publishSize="3586039" publishTime="1496823404"/>
-          <PublishItem publishSize="3586035" publishTime="1496823338"/>
-          <PublishItem publishSize="3585682" publishTime="1496774819"/>
-          <PublishItem publishSize="3585682" publishTime="1496774320"/>
-          <PublishItem publishSize="3585616" publishTime="1496774102"/>
-          <PublishItem publishSize="3585626" publishTime="1496773731"/>
-          <PublishItem publishSize="3585626" publishTime="1496773473"/>
-          <PublishItem publishSize="3585611" publishTime="1496773108"/>
-          <PublishItem publishSize="3585565" publishTime="1496772712"/>
-          <PublishItem publishSize="3585578" publishTime="1496772665"/>
-          <PublishItem publishSize="3585539" publishTime="1496772471"/>
-          <PublishItem publishSize="3585539" publishTime="1496772443"/>
      </publishHistory>
 </DOMDocument>

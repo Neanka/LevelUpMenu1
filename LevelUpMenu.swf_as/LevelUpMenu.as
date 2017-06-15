@@ -7,6 +7,7 @@
 	import Shared.PlatformChangeEvent;
 	import flash.display.MovieClip;
 	import flash.events.Event;
+	import flash.events.IOErrorEvent;
 	import flash.events.MouseEvent;
 	import flash.events.TimerEvent;
 	import flash.events.KeyboardEvent;
@@ -182,9 +183,6 @@
 		//	this.List_mc.InvalidateData();
 		//	stage.focus = this.List_mc;
 		//	this.List_mc.selectedIndex = 0;
-			    var _loc3_:ColorTransform = this.XPMeterHolder_mc.transform.colorTransform;									//////////!!!!!!!!!!!!!!!!!!!!! CHECK THIS
-																															//////////!!!!!!!!!!!!!!!!!!!!! CHECK THIS
-         this.freepoints_holder_mc.transform.colorTransform = _loc3_;														//////////!!!!!!!!!!!!!!!!!!!!! CHECK THIS
 			//---
 		}
 		
@@ -223,7 +221,17 @@
 			this.PPCount = param3;
 			//GlobalFunc.SetText(this.freepoints_holder_mc.countField1, String(param1), false);
 			//this.SPCount = param1;
-			
+			if (param1.length == 0){
+				this.List_mc.visible = false;
+				this.bgholder_mc.width = 820;
+				this.x += 180;
+				this.ButtonHintBar_mc.x -= 180;
+				this.freepoints_holder_mc.x -= 360;
+				this.freepoints_holder_mc.textField1.visible = false;
+				this.freepoints_holder_mc.countField1.visible = false;
+				this.freepoints_holder_mc.textField.y = 8;
+				this.freepoints_holder_mc.countField.y = 8;
+			}
 		this._SampleList = param1;
 		this._SampleList1 = param4;
 		
@@ -237,7 +245,9 @@
 			this.PerkList_mc.selectedIndex = 0;
 
 			this.SetButtons();
-
+			    var _loc3_:ColorTransform = this.XPMeterHolder_mc.transform.colorTransform;									//////////!!!!!!!!!!!!!!!!!!!!! CHECK THIS
+																															//////////!!!!!!!!!!!!!!!!!!!!! CHECK THIS
+         this.freepoints_holder_mc.transform.colorTransform = _loc3_;														//////////!!!!!!!!!!!!!!!!!!!!! CHECK THIS
 		}
 		public function onCodeObjDestruction(): * {
 			this.GridView_mc.codeObj = null;
@@ -712,9 +722,10 @@
 		 {
 			GlobalFunc.SetText(this.Description_tf,this.PerkList_mc.selectedEntry.description,false);
 			GlobalFunc.SetText(this.Reqs_tf,this.PerkList_mc.selectedEntry.reqs,true);
-			_loc2_ = new URLRequest("Components/VaultBoys/Perks/" + this.PerkList_mc.selectedEntry.qname + ".swf");
+			_loc2_ = new URLRequest("Components/VaultBoys/Perks/PerkClip_" + (this.PerkList_mc.selectedEntry.qname & 0xFFFFFF).toString(16) + ".swf");
             _loc3_ = new LoaderContext(false,ApplicationDomain.currentDomain);
             this._VBLoader.contentLoaderInfo.addEventListener(Event.COMPLETE,this.onVBLoadComplete);
+			this._VBLoader.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR,this.onVBLoadIOError);
             this._VBLoader.load(_loc2_,_loc3_);
          } else {
             GlobalFunc.SetText(this.Description_tf,"",false);
@@ -739,6 +750,18 @@
          this.VBHolder_mc.addChild(param1.target.content);
       }
 	  
+      private function onVBLoadIOError(errorEvent:IOErrorEvent) : *
+      {
+         errorEvent.target.removeEventListener(IOErrorEvent.IO_ERROR,this.onVBLoadIOError);
+		 errorEvent.target.removeEventListener(Event.COMPLETE,this.onVBLoadComplete);
+         var _loc2_:URLRequest = null;
+         var _loc3_:LoaderContext = null;
+		_loc2_ = new URLRequest("Components/VaultBoys/Perks/PerkClip_Default.swf");
+        _loc3_ = new LoaderContext(false,ApplicationDomain.currentDomain);
+        this._VBLoader.contentLoaderInfo.addEventListener(Event.COMPLETE,this.onVBLoadComplete);
+        this._VBLoader.load(_loc2_,_loc3_);
+      }
+	  
       private function onItemPress(param1:Event) : *
       {
 
@@ -746,7 +769,7 @@
 	  
       public function onMenuKeyDown(param1:KeyboardEvent) : *
       {
-		if(SPCount == 0 && (param1.keyCode == Keyboard.ENTER))// || param1.keyCode == Keyboard.E))
+		if(SPCount == 0 && PPCount == 0 && (param1.keyCode == Keyboard.ENTER))// || param1.keyCode == Keyboard.E))
             {
                this.onAcceptPressed();
 			   param1.stopPropagation();

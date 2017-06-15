@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Sprites_o/Sprite 1952" itemID="591c88d9-0000046d" linkageExportForAS="true" linkageExportForRS="true" linkageIdentifier="LevelUpMenu" linkageClassName="LevelUpMenu" sourceFlashFilepath="Sprite 1952" lastModified="1496824021" sourceItemID="00000000-ffffffff">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Sprites_o/Sprite 1952" itemID="591c88d9-0000046d" linkageExportForAS="true" linkageExportForRS="true" linkageIdentifier="LevelUpMenu" linkageClassName="LevelUpMenu" sourceFlashFilepath="Sprite 1952" lastModified="1497446205" sourceItemID="00000000-ffffffff">
   <timeline>
     <DOMTimeline name="Sprite 1952">
       <layers>
@@ -72,15 +72,15 @@
                 </DOMSymbolInstance>
                 <DOMSymbolInstance libraryItemName="Символ 1" name="VBHolder_mc">
                   <matrix>
-                    <Matrix tx="341" ty="-7"/>
+                    <Matrix tx="341" ty="13"/>
                   </matrix>
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
                 </DOMSymbolInstance>
-                <DOMDynamicText name="Description_tf" fontRenderingMode="device" width="376" height="202.85" isSelectable="false" renderAsHTML="true" lineType="multiline">
+                <DOMDynamicText name="Description_tf" fontRenderingMode="device" width="376" height="169.95" isSelectable="false" renderAsHTML="true" lineType="multiline">
                   <matrix>
-                    <Matrix tx="452" ty="395.05"/>
+                    <Matrix tx="452" ty="435"/>
                   </matrix>
                   <textRuns>
                     <DOMTextRun>
@@ -91,9 +91,9 @@
                     </DOMTextRun>
                   </textRuns>
                 </DOMDynamicText>
-                <DOMDynamicText name="Reqs_tf" fontRenderingMode="device" width="376" height="64.2" isSelectable="false" renderAsHTML="true" lineType="multiline">
+                <DOMDynamicText name="Reqs_tf" selected="true" fontRenderingMode="device" width="376" height="71.6" isSelectable="false" renderAsHTML="true" lineType="multiline">
                   <matrix>
-                    <Matrix tx="452" ty="317.45"/>
+                    <Matrix tx="452" ty="357"/>
                   </matrix>
                   <textRuns>
                     <DOMTextRun>
@@ -138,7 +138,7 @@
                     </DOMTextRun>
                   </textRuns>
                 </DOMDynamicText>
-                <DOMSymbolInstance libraryItemName="def_cb" name="filterCb" selected="true">
+                <DOMSymbolInstance libraryItemName="def_cb" name="filterCb">
                   <matrix>
                     <Matrix tx="284.05" ty="78"/>
                   </matrix>
