@@ -1,0 +1,26 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Shape 147 - копия" itemID="5946d8a7-000007b1" symbolType="graphic" lastModified="1497898619">
+  <timeline>
+    <DOMTimeline name="Shape 147 - копия">
+      <layers>
+        <DOMLayer name="Shape Sublayer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#454545" alpha="0.976470588235294"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!4800 920S2|0 920!0 920|0 0!0 0|4800 0!4800 0|4800 920"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

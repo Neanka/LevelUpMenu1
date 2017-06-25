@@ -27,25 +27,36 @@
 	import flash.geom.ColorTransform;
 
 	public class LevelUpMenu extends IMenu {
-	
-	private var debugmode: Boolean = false;
-		private static var _instance:LevelUpMenu;
+
+		private var debugmode: Boolean = false;
+		private static var _instance: LevelUpMenu;
 		public var bgholder_mc: def_BG_Holder;
+		public var Intense_training_menu_mc: Intense_training_menu;
+		public var LearnSkillsConfirmMenu_mc: LearnSkillsConfirmMenu;
 		public var List_mc: BSScrollingList;
 		public var PerkList_mc: BSScrollingList;
 		public var spec_tf: TextField;
 		private var _SampleList: Array;
 		private var _SampleList1: Array;
+		private var _SampleList3: Array;
 		public var freepoints_holder_mc: freepoints_holder;
 		public var VBHolder_mc: MovieClip;
 		public var Description_tf: TextField;
 		public var Reqs_tf: TextField;
 		public var atf: TextField;
-		private const SkillsClipNameMap:Array = ["Barter","Energy Weapons","Explosives","Guns","LockPick","Medicine","Melee Weapons","Repair","Science","Sneak","Speech","Survival","Unarmed"];
-		private var _VBLoader:Loader;
+		//private const SkillsClipNameMap: Array = ["Barter", "Energy Weapons", "Explosives", "Guns", "LockPick", "Medicine", "Melee Weapons", "Repair", "Science", "Sneak", "Speech", "Survival", "Unarmed"];
+		private var _VBLoader: Loader;
 		private var uiSPCount: uint;
 		private var uiPPCount: uint;
 		public var filterCb: def_controls_cb;
+		private var loaded: uint = 0;
+		private const TYPE_INTENSETRAINING: int = 8;
+		private const TYPE_CANCEL: int = 9;
+		
+		private var LearnSkillsButton: BSButtonHintData;
+		private var CancelLearnSkillsButton: BSButtonHintData;
+		
+		
 
 		public var GridView_mc: PerkGrid;
 
@@ -88,6 +99,8 @@
 		public function LevelUpMenu() {
 			LevelUpMenu._instance = this;
 			this.AcceptButton = new BSButtonHintData("$ACCEPT", "Enter", "PSN_A", "Xenon_A", 1, this.onAcceptPressed);
+			this.LearnSkillsButton = new BSButtonHintData("$LEARN SKILLS", "Enter", "PSN_A", "Xenon_A", 1, this.onLearnSkillsPressed);
+			this.CancelLearnSkillsButton = new BSButtonHintData("$CANCEL", "Tab", "PSN_B", "Xenon_B", 1, this.onCancelLearnSkillsPressed);
 			this.CancelButton = new BSButtonHintData("$CLOSE", "Tab", "PSN_B", "Xenon_B", 1, this.onCancelPressed);
 			this.PrevPerkButton = new BSButtonHintData("$PREV PERK", "Ctrl", "PSN_L1", "Xenon_L1", 1, this.onPrevPerk);
 			this.NextPerkButton = new BSButtonHintData("$NEXT PERK", "Alt", "PSN_R1", "Xenon_R1", 1, this.onNextPerk);
@@ -110,10 +123,10 @@
 			this.GridView_mc.addEventListener(PerkAnimHolder.CLICK, this.onGridItemPress);
 			//---my
 			this._VBLoader = new Loader();
-			addEventListener(BSScrollingList.ITEM_PRESS,this.onItemPress);
-			addEventListener(BSScrollingList.SELECTION_CHANGE,this.onSelectionChange);
-			addEventListener(KeyboardEvent.KEY_DOWN,this.onMenuKeyDown);
-			addEventListener(ArrowButton.MOUSE_UP,this.onArrowClick);
+			addEventListener(BSScrollingList.ITEM_PRESS, this.onItemPress);
+			addEventListener(BSScrollingList.SELECTION_CHANGE, this.onSelectionChange);
+			addEventListener(KeyboardEvent.KEY_DOWN, this.onMenuKeyDown);
+			addEventListener(ArrowButton.MOUSE_UP, this.onArrowClick);
 			addEventListener(ItemList.MOUSE_OVER, this.onListMouseOver);
 			filterCb.addEventListener(MouseEvent.CLICK, this.onCbClick);
 			//---
@@ -126,41 +139,44 @@
 			this.__setProp_bgholder_mc_MenuObj_bgholder_mc_0();
 			this.__setProp_List_mc_MenuObj_List_mc_0();
 			this.__setProp_PerkList_mc_MenuObj_PerkList_mc_0();
-			 newlist1();
+			this.__setProp_Intense_training_menu_mc_MenuObj_Intense_training_menu_mc_0();
+			this.__setProp_LearnSkillsConfirmMenu_mc_MenuObj_LearnSkillsConfirmMenu_mc_0();
+			newlist1();
 			//---
-			
+
 		}
-		
-      public static function get instance() : LevelUpMenu
-      {
-         return _instance;
-      }
-	  
-		private function onListMouseOver(event:Event){
-			//if (!this.QuantityMenu_mc.opened){
-				if ((event.target == this.List_mc) && !(stage.focus == List_mc)){
+
+		public static function get instance(): LevelUpMenu {
+			return _instance;
+		}
+
+		private function onListMouseOver(event: Event) {
+			if (!this.Intense_training_menu_mc.opened && !this.LearnSkillsConfirmMenu_mc.opened) {
+				if ((event.target == this.List_mc) && !(stage.focus == List_mc)) {
 					stage.focus = this.List_mc;
 					this.PerkList_mc.selectedIndex = -1;
 				} else {
-					if ((event.target == this.PerkList_mc) && !(stage.focus == this.PerkList_mc)){
+					if ((event.target == this.PerkList_mc) && !(stage.focus == this.PerkList_mc)) {
 						stage.focus = this.PerkList_mc;
 						this.List_mc.selectedIndex = -1;
 					};
 				};
-			//};
+			};
 		}
-		
-		private function onCbClick(event:Event){
+
+		private function onCbClick(event: Event) {
 			filterCb.togglecheck();
-			this.PerkList_mc.filterer.itemFilter = filterCb.bChecked ? 3:1;
+			this.PerkList_mc.filterer.itemFilter = filterCb.bChecked ? 3 : 1;
 			this.PerkList_mc.InvalidateData();
-		//	this.PerkList_mc.UpdateList();
+			//	this.PerkList_mc.UpdateList();
 			this.PerkList_mc.selectedIndex = this.PerkList_mc.GetEntryFromClipIndex(0);
 		}
 
 		private function PopulateButtonBar(): void {
-			var _loc1_: Vector.<BSButtonHintData>= new Vector.<BSButtonHintData>();
-			  _loc1_.push(this.AcceptButton);
+			var _loc1_: Vector.<BSButtonHintData>= new Vector.<BSButtonHintData> ();
+			_loc1_.push(this.AcceptButton);
+			_loc1_.push(this.LearnSkillsButton);
+			_loc1_.push(this.CancelLearnSkillsButton);
 			//_loc1_.push(this.CancelButton);
 			//  _loc1_.push(this.PrevPerkButton);
 			//   _loc1_.push(this.NextPerkButton);
@@ -177,33 +193,27 @@
 			//this.GridView_mc.InvalidateGrid();
 			//this.GridView_mc.addEventListener(PerkGrid.TEXTURES_LOADED, this.onGridTexturesLoaded);
 			//---my
-	//		root.f4se.SendExternalEvent("LevelUp::RequestSkills");
-		//	newlist();
-		//	this.List_mc.entryList = this._SampleList;
-		//	this.List_mc.InvalidateData();
-		//	stage.focus = this.List_mc;
-		//	this.List_mc.selectedIndex = 0;
-			//---
+			//		root.f4se.SendExternalEvent("LevelUp::RequestSkills");
 		}
-		
-		public function onRequestSkills(param1: uint,param2: Array): * {
+
+		public function onRequestSkills(param1: uint, param2: Array): * {
 			atrace("skillsrecieved");
 			//GlobalFunc.SetText(this.freepoints_holder_mc.countField1, String(param1), false);
 			this.SPCount = param1;
-			
-		this._SampleList = new Array();
-		var i: int = 0;
-		for each(var obj in param2){
-			this._SampleList.push({
-				text: obj["__var__"]["__struct__"]["__data__"]["stext"],
-				description: obj["__var__"]["__struct__"]["__data__"]["sdescription"],
-				value: obj["__var__"]["__struct__"]["__data__"]["ivalue"],
-				clipIndex: obj["__var__"]["__struct__"]["__data__"]["iclipIndex"],
-				basevalue: obj["__var__"]["__struct__"]["__data__"]["ivalue"]
-			});
-		i++;
-		}
-		atrace("filling array finished");
+
+			this._SampleList = new Array();
+			var i: int = 0;
+			for each(var obj in param2) {
+				this._SampleList.push({
+					text: obj["__var__"]["__struct__"]["__data__"]["stext"],
+					description: obj["__var__"]["__struct__"]["__data__"]["sdescription"],
+					value: obj["__var__"]["__struct__"]["__data__"]["ivalue"],
+					clipIndex: obj["__var__"]["__struct__"]["__data__"]["iclipIndex"],
+					basevalue: obj["__var__"]["__struct__"]["__data__"]["ivalue"]
+				});
+				i++;
+			}
+			atrace("filling array finished");
 			this.List_mc.entryList = this._SampleList;
 			this.List_mc.InvalidateData();
 			stage.focus = this.List_mc;
@@ -211,43 +221,62 @@
 			this.SetButtons();
 		}
 
-		public function qqStart(param1: Array,param2: int, param3: int, param4: Array, param5: String): * {
-		//public function qqStart(param1: Array): * {
-			atrace("skillsrecieved");
-			trace("param2 "+ param2+ "   param3: "+param3);
-			trace("param5 "+ param5);
-			this.spec_tf.text = param5;
-			this.SPCount = param2;
-			this.PPCount = param3;
-			//GlobalFunc.SetText(this.freepoints_holder_mc.countField1, String(param1), false);
-			//this.SPCount = param1;
-			if (param1.length == 0){
+		public function qqStart(skills_array: Array, aSPCount: int, aPPCount: int, perks_array: Array, aspec_tf: String, IT_array: Array): * {
+
+			this.spec_tf.text = aspec_tf;
+			this.SPCount = aSPCount;
+			this.PPCount = aPPCount;
+
+			if (skills_array.length == 0 && loaded == 0) {
 				this.List_mc.visible = false;
 				this.bgholder_mc.width = 820;
 				this.x += 180;
 				this.ButtonHintBar_mc.x -= 180;
+				//this.Intense_training_menu_mc.x -= 180;
 				this.freepoints_holder_mc.x -= 360;
 				this.freepoints_holder_mc.textField1.visible = false;
 				this.freepoints_holder_mc.countField1.visible = false;
 				this.freepoints_holder_mc.textField.y = 8;
 				this.freepoints_holder_mc.countField.y = 8;
+				loaded = 1;
 			}
-		this._SampleList = param1;
-		this._SampleList1 = param4;
-		
-		atrace("filling array finished");
-			this.List_mc.entryList = this._SampleList;
-			this.List_mc.InvalidateData();
-			stage.focus = this.List_mc;
-			this.List_mc.selectedIndex = -1;
-			this.PerkList_mc.entryList = this._SampleList1;
-			this.PerkList_mc.InvalidateData();
-			this.PerkList_mc.selectedIndex = 0;
 
+			IT_array.push({
+				text: "$Cancel",
+				type: TYPE_CANCEL
+			});
+			this.Intense_training_menu_mc.stats_list.entryList = IT_array; //this._SampleList3;
+			this.Intense_training_menu_mc.stats_list.InvalidateData();
+
+			atrace("filling array finished");
+			var oldindex: int = this.PerkList_mc.selectedIndex;
+			this.PerkList_mc.selectedIndex = -1;
+			this.List_mc.entryList = skills_array;
+			this.List_mc.InvalidateData();
+			this.List_mc.selectedIndex = -1;
+			this.PerkList_mc.entryList = perks_array;
+			this.PerkList_mc.InvalidateData();
+			if (oldindex < 0) {
+				this.PerkList_mc.selectedIndex = 0; //GetEntryFromClipIndex(0);
+			} else {
+				this.PerkList_mc.selectedIndex = oldindex;
+			}
 			this.SetButtons();
-			    var _loc3_:ColorTransform = this.XPMeterHolder_mc.transform.colorTransform;									//////////!!!!!!!!!!!!!!!!!!!!! CHECK THIS
-																															//////////!!!!!!!!!!!!!!!!!!!!! CHECK THIS
-         this.freepoints_holder_mc.transform.colorTransform = _loc3_;														//////////!!!!!!!!!!!!!!!!!!!!! CHECK THIS
+			//var _loc3_: ColorTransform = this.XPMeterHolder_mc.transform.colorTransform; //////////!!!!!!!!!!!!!!!!!!!!! CHECK THIS
+			//////////!!!!!!!!!!!!!!!!!!!!! CHECK THIS
+			//this.freepoints_holder_mc.transform.colorTransform = _loc3_; //////////!!!!!!!!!!!!!!!!!!!!! CHECK THIS
+	
+			var yesno:Array = new Array();
+			yesno.push({
+				text: "$YES"
+			});
+			yesno.push({
+				text: "$NO"
+			});
+			this.LearnSkillsConfirmMenu_mc.confirmlist_mc.entryList = yesno;
+			this.LearnSkillsConfirmMenu_mc.confirmlist_mc.InvalidateData();
+			this.LearnSkillsConfirmMenu_mc.confirmlist_mc.selectedIndex = 0;
+			stage.focus = this.PerkList_mc;
 		}
 		public function onCodeObjDestruction(): * {
 			this.GridView_mc.codeObj = null;
@@ -271,25 +300,25 @@
 			this.uiPerkCount = param1;
 			this.GridView_mc.perkCount = param1;
 		}
-		
+
 		public function get SPCount(): uint {
 			return this.uiSPCount;
 		}
 
 		public function set SPCount(param1: uint): * {
-		GlobalFunc.SetText(this.freepoints_holder_mc.countField1, String(param1), false);
+			GlobalFunc.SetText(this.freepoints_holder_mc.countField1, String(param1), false);
 			this.uiSPCount = param1;
-				this.AcceptButton.ButtonDisabled = param1!=0 && PPCount ==0;
+			this.AcceptButton.ButtonDisabled = param1 != 0 && PPCount == 0;
 		}
-		
+
 		public function get PPCount(): uint {
 			return this.uiPPCount;
 		}
 
 		public function set PPCount(param1: uint): * {
-		GlobalFunc.SetText(this.freepoints_holder_mc.countField, String(param1), false);
+			GlobalFunc.SetText(this.freepoints_holder_mc.countField, String(param1), false);
 			this.uiPPCount = param1;
-				this.AcceptButton.ButtonDisabled = param1!=0 && SPCount ==0;
+			this.AcceptButton.ButtonDisabled = param1 != 0 && SPCount == 0;
 		}
 
 		public function set ratio16x10(param1: Boolean): * {
@@ -356,16 +385,43 @@
 
 		private function onAcceptPressed(): Boolean {
 			var temparray: Array = new Array();
-			for each (var obj in this.List_mc.entryList) {
+			for each(var obj in this.List_mc.entryList) {
 				temparray.push(obj.value);
 			}
 			root.f4se.SendExternalEvent("LevelUp::ReturnSkills", temparray);
 			this.BGSCodeObj.CloseMenu();
-			
 		}
 
+		private function onLearnSkillsPressed(): Boolean {
+		
+			this.LearnSkillsConfirmMenu_mc.confirmtype = LearnSkillsConfirmMenu.CONFIRM_TYPE_SKILL;
+			this.LearnSkillsConfirmMenu_mc.Open(stage.focus,"$SKILLS CONFIRMATION TEXT");
+			stage.focus = this.LearnSkillsConfirmMenu_mc.confirmlist_mc;
+			this.PerkList_mc.disableInput = true;
+			this.PerkList_mc.disableSelection = true;
+			this.List_mc.disableInput = true;
+			this.List_mc.disableSelection = true;
+			SetButtons();
+		}
+		
+		private function onLearnSkillsConfirm(): Boolean {
+		
+			stage.focus = this.LearnSkillsConfirmMenu_mc.prevFocus;
+			if (LearnSkillsConfirmMenu_mc.confirmlist_mc.selectedIndex == 0) this.LearnSkillsConfirmMenu_mc.Close();
+			this.PerkList_mc.disableInput = false;
+			this.PerkList_mc.disableSelection = false;
+			this.List_mc.disableInput = false;
+			this.List_mc.disableSelection = false;
+			SetButtons();
+		}
+		
+		
+		private function onCancelLearnSkillsPressed(): Boolean {
+
+		}
+		
 		private function onCancelPressed(): Boolean {
-				this.BGSCodeObj.CloseMenu();
+			this.BGSCodeObj.CloseMenu();
 		}
 
 		protected function OnSelectPerk(): * {
@@ -505,7 +561,7 @@
 		}
 
 		private function SetButtons(): * {
-		/*	var _loc1_: Object = this.GridView_mc.selectedPerkEntry;
+			/*	var _loc1_: Object = this.GridView_mc.selectedPerkEntry;
 			if (this.bConfirming) {
 				this.AcceptButton.ButtonText = "$ACCEPT";
 				this.AcceptButton.ButtonDisabled = false;
@@ -644,6 +700,48 @@
 			}
 		}
 
+		function __setProp_Intense_training_menu_mc_MenuObj_Intense_training_menu_mc_0(): * {
+			try {
+				this.Intense_training_menu_mc["componentInspectorSetting"] = true;
+			} catch (e: Error) {}
+			this.Intense_training_menu_mc.bracketCornerLength = 6;
+			this.Intense_training_menu_mc.bracketLineWidth = 1.5;
+			this.Intense_training_menu_mc.bracketPaddingX = 0;
+			this.Intense_training_menu_mc.bracketPaddingY = 0;
+			this.Intense_training_menu_mc.BracketStyle = "vertical";
+			this.Intense_training_menu_mc.bShowBrackets = true;
+			this.Intense_training_menu_mc.bUseShadedBackground = true;
+			this.Intense_training_menu_mc.ShadedBackgroundMethod = "Flash";
+			this.Intense_training_menu_mc.ShadedBackgroundType = "normal";
+			try {
+				this.Intense_training_menu_mc["componentInspectorSetting"] = false;
+				return;
+			} catch (e: Error) {
+				return;
+			}
+		}
+		
+		function __setProp_LearnSkillsConfirmMenu_mc_MenuObj_LearnSkillsConfirmMenu_mc_0(): * {
+			try {
+				this.LearnSkillsConfirmMenu_mc["componentInspectorSetting"] = true;
+			} catch (e: Error) {}
+			this.LearnSkillsConfirmMenu_mc.bracketCornerLength = 6;
+			this.LearnSkillsConfirmMenu_mc.bracketLineWidth = 1.5;
+			this.LearnSkillsConfirmMenu_mc.bracketPaddingX = 0;
+			this.LearnSkillsConfirmMenu_mc.bracketPaddingY = 0;
+			this.LearnSkillsConfirmMenu_mc.BracketStyle = "vertical";
+			this.LearnSkillsConfirmMenu_mc.bShowBrackets = true;
+			this.LearnSkillsConfirmMenu_mc.bUseShadedBackground = true;
+			this.LearnSkillsConfirmMenu_mc.ShadedBackgroundMethod = "Flash";
+			this.LearnSkillsConfirmMenu_mc.ShadedBackgroundType = "normal";
+			try {
+				this.LearnSkillsConfirmMenu_mc["componentInspectorSetting"] = false;
+				return;
+			} catch (e: Error) {
+				return;
+			}
+		}
+		
 		function __setProp_ButtonHintBar_mc_MenuObj_ButtonHintBar_mc_0(): * {
 			try {
 				this.ButtonHintBar_mc["componentInspectorSetting"] = true;
@@ -681,7 +779,7 @@
 				return;
 			}
 		}
-		function __setProp_PerkList_mc_MenuObj_PerkList_mc_0(): * {		
+		function __setProp_PerkList_mc_MenuObj_PerkList_mc_0(): * {
 			try {
 				this.PerkList_mc["componentInspectorSetting"] = true;
 			} catch (e: Error) {}
@@ -697,134 +795,204 @@
 				return;
 			}
 		}
-		
-      private function onSelectionChange(param1:Event) : *
-      {
-	/*if (param1.target == this.List_mc){
+
+		private function onSelectionChange(param1: Event): * {
+			/*if (param1.target == this.List_mc){
 	this.PerkList_mc.selectedIndex = -1;	
 	stage.focus = this.List_mc;
 	} else {
 	this.List_mc.selectedIndex = -1;
 	stage.focus = this.PerkList_mc;
 	}*/
-         var _loc2_:URLRequest = null;
-         var _loc3_:LoaderContext = null;
-         if(this.List_mc.selectedEntry && this.List_mc.selectedEntry.description)
-         {
-            GlobalFunc.SetText(this.Description_tf,this.List_mc.selectedEntry.description,false);
-			GlobalFunc.SetText(this.Reqs_tf,"",false);
-            //_loc2_ = new URLRequest("Components/VaultBoys/Skills/" + this.SkillsClipNameMap[this.List_mc.selectedIndex] + ".swf");
-			_loc2_ = new URLRequest("Components/VaultBoys/Skills/" + this.List_mc.selectedEntry.qname + ".swf");
-            _loc3_ = new LoaderContext(false,ApplicationDomain.currentDomain);
-            this._VBLoader.contentLoaderInfo.addEventListener(Event.COMPLETE,this.onVBLoadComplete);
-            this._VBLoader.load(_loc2_,_loc3_);
-         } else if (this.PerkList_mc.selectedEntry && this.PerkList_mc.selectedEntry.description)
-		 {
-			GlobalFunc.SetText(this.Description_tf,this.PerkList_mc.selectedEntry.description,false);
-			GlobalFunc.SetText(this.Reqs_tf,this.PerkList_mc.selectedEntry.reqs,true);
-			_loc2_ = new URLRequest("Components/VaultBoys/Perks/PerkClip_" + (this.PerkList_mc.selectedEntry.qname & 0xFFFFFF).toString(16) + ".swf");
-            _loc3_ = new LoaderContext(false,ApplicationDomain.currentDomain);
-            this._VBLoader.contentLoaderInfo.addEventListener(Event.COMPLETE,this.onVBLoadComplete);
-			this._VBLoader.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR,this.onVBLoadIOError);
-            this._VBLoader.load(_loc2_,_loc3_);
-         } else {
-            GlobalFunc.SetText(this.Description_tf,"",false);
-			GlobalFunc.SetText(this.Reqs_tf,"",false);
-            if(this.VBHolder_mc.numChildren > 0)
-            {
-               this.VBHolder_mc.removeChildAt(0);
-            }
-         }
-         this.BGSCodeObj.playSound("UIMenuFocus");
-      }
-	  
-      private function onVBLoadComplete(param1:Event) : *
-      {
-         var _loc2_:DisplayObject = null;
-         param1.target.removeEventListener(Event.COMPLETE,this.onVBLoadComplete);
-         if(this.VBHolder_mc.numChildren > 0)
-         {
-            _loc2_ = this.VBHolder_mc.getChildAt(0);
-            this.VBHolder_mc.removeChild(_loc2_);
-         }
-         this.VBHolder_mc.addChild(param1.target.content);
-      }
-	  
-      private function onVBLoadIOError(errorEvent:IOErrorEvent) : *
-      {
-         errorEvent.target.removeEventListener(IOErrorEvent.IO_ERROR,this.onVBLoadIOError);
-		 errorEvent.target.removeEventListener(Event.COMPLETE,this.onVBLoadComplete);
-         var _loc2_:URLRequest = null;
-         var _loc3_:LoaderContext = null;
-		_loc2_ = new URLRequest("Components/VaultBoys/Perks/PerkClip_Default.swf");
-        _loc3_ = new LoaderContext(false,ApplicationDomain.currentDomain);
-        this._VBLoader.contentLoaderInfo.addEventListener(Event.COMPLETE,this.onVBLoadComplete);
-        this._VBLoader.load(_loc2_,_loc3_);
-      }
-	  
-      private function onItemPress(param1:Event) : *
-      {
+			var _loc2_: URLRequest = null;
+			var _loc3_: LoaderContext = null;
 
-      }
-	  
-      public function onMenuKeyDown(param1:KeyboardEvent) : *
-      {
-		if(SPCount == 0 && PPCount == 0 && (param1.keyCode == Keyboard.ENTER))// || param1.keyCode == Keyboard.E))
-            {
-               this.onAcceptPressed();
-			   param1.stopPropagation();
-            }
-	  
-         if(this.List_mc.selectedIndex != -1)
-         {
-            if(param1.keyCode == Keyboard.A)
-            {
-               this.ModSelectedValue(-1);
-            }
-            else if(param1.keyCode == Keyboard.D)
-            {
-               this.ModSelectedValue(1);
-            }
-            else if(param1.keyCode == Keyboard.W)
-            {
-               this.List_mc.moveSelectionUp();
-            }
-            else if(param1.keyCode == Keyboard.S)
-            {
-               this.List_mc.moveSelectionDown();
-            }
-         }
-      }
-	  
-      private function ModSelectedValue(param1:int) : *
-      {
-	  atrace("value "+String(this.List_mc.selectedEntry.value));
-	  atrace("basevalue "+String(this.List_mc.selectedEntry.basevalue));
-	  atrace("param1 "+String(param1));
-		if (param1<0 && this.List_mc.selectedEntry.value>this.List_mc.selectedEntry.basevalue || param1 > 0 && this.uiSPCount > 0 && this.List_mc.selectedEntry.value<100)
+			if (this.Intense_training_menu_mc.opened) {
+				if (this.Intense_training_menu_mc.stats_list.selectedEntry && this.Intense_training_menu_mc.stats_list.selectedEntry.description) {
+					GlobalFunc.SetText(this.Description_tf, this.Intense_training_menu_mc.stats_list.selectedEntry.description, false);
+					GlobalFunc.SetText(this.Reqs_tf, this.Intense_training_menu_mc.stats_list.selectedEntry.reqs, true);
+					_loc2_ = new URLRequest("Components/VaultBoys/Perks/PerkClip_" + (this.Intense_training_menu_mc.stats_list.selectedEntry.qname & 0xFFFFFF).toString(16) + ".swf");
+					_loc3_ = new LoaderContext(false, ApplicationDomain.currentDomain);
+					this._VBLoader.contentLoaderInfo.addEventListener(Event.COMPLETE, this.onVBLoadComplete);
+					this._VBLoader.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, this.onVBLoadIOError);
+					this._VBLoader.load(_loc2_, _loc3_);
+				} else {
+					GlobalFunc.SetText(this.Description_tf, "", false);
+					GlobalFunc.SetText(this.Reqs_tf, "", false);
+					if (this.VBHolder_mc.numChildren > 0) {
+						this.VBHolder_mc.removeChildAt(0);
+					}
+				}
+			} else if (this.LearnSkillsConfirmMenu_mc.opened) {
+
+			} else {
+				if (this.List_mc.selectedEntry && this.List_mc.selectedEntry.description) {
+					GlobalFunc.SetText(this.Description_tf, this.List_mc.selectedEntry.description, false);
+					GlobalFunc.SetText(this.Reqs_tf, "", false);
+					//_loc2_ = new URLRequest("Components/VaultBoys/Skills/" + this.SkillsClipNameMap[this.List_mc.selectedIndex] + ".swf");
+					_loc2_ = new URLRequest("Components/VaultBoys/Skills/" + this.List_mc.selectedEntry.qname + ".swf");
+					_loc3_ = new LoaderContext(false, ApplicationDomain.currentDomain);
+					this._VBLoader.contentLoaderInfo.addEventListener(Event.COMPLETE, this.onVBLoadComplete);
+					this._VBLoader.load(_loc2_, _loc3_);
+				} else if (this.PerkList_mc.selectedEntry && this.PerkList_mc.selectedEntry.description) {
+					GlobalFunc.SetText(this.Description_tf, this.PerkList_mc.selectedEntry.description, false);
+					GlobalFunc.SetText(this.Reqs_tf, this.PerkList_mc.selectedEntry.reqs, true);
+					_loc2_ = new URLRequest("Components/VaultBoys/Perks/PerkClip_" + (this.PerkList_mc.selectedEntry.qname & 0xFFFFFF).toString(16) + ".swf");
+					_loc3_ = new LoaderContext(false, ApplicationDomain.currentDomain);
+					this._VBLoader.contentLoaderInfo.addEventListener(Event.COMPLETE, this.onVBLoadComplete);
+					this._VBLoader.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, this.onVBLoadIOError);
+					this._VBLoader.load(_loc2_, _loc3_);
+				} else {
+					GlobalFunc.SetText(this.Description_tf, "", false);
+					GlobalFunc.SetText(this.Reqs_tf, "", false);
+					if (this.VBHolder_mc.numChildren > 0) {
+						this.VBHolder_mc.removeChildAt(0);
+					}
+				}
+			}
+
+
+			this.BGSCodeObj.playSound("UIMenuFocus");
+		}
+
+
+
+		private function onVBLoadComplete(param1: Event): * {
+			var _loc2_: DisplayObject = null;
+			param1.target.removeEventListener(Event.COMPLETE, this.onVBLoadComplete);
+			if (this.VBHolder_mc.numChildren > 0) {
+				_loc2_ = this.VBHolder_mc.getChildAt(0);
+				this.VBHolder_mc.removeChild(_loc2_);
+			}
+			this.VBHolder_mc.addChild(param1.target.content);
+		}
+
+		private function onVBLoadIOError(errorEvent: IOErrorEvent): * {
+			errorEvent.target.removeEventListener(IOErrorEvent.IO_ERROR, this.onVBLoadIOError);
+			errorEvent.target.removeEventListener(Event.COMPLETE, this.onVBLoadComplete);
+			var _loc2_: URLRequest = null;
+			var _loc3_: LoaderContext = null;
+			_loc2_ = new URLRequest("Components/VaultBoys/Perks/PerkClip_Default.swf");
+			_loc3_ = new LoaderContext(false, ApplicationDomain.currentDomain);
+			this._VBLoader.contentLoaderInfo.addEventListener(Event.COMPLETE, this.onVBLoadComplete);
+			this._VBLoader.load(_loc2_, _loc3_);
+		}
+
+		private function onItemPress(param1: Event): * {
+
+				switch (param1.target.name) {
+					case "PerkList_mc":
+						if (PPCount > 0) {
+							if ((param1.target.selectedEntry.type == TYPE_INTENSETRAINING) && (param1.target.selectedEntry.iselig)) {
+								this.Intense_training_menu_mc.Open()
+							} else perkpressed(param1.target);
+						}
+						break;
+					case "stats_list":
+						if (PPCount > 0) {
+							if (param1.target.selectedEntry.type != TYPE_CANCEL) perkpressed(param1.target);
+							this.Intense_training_menu_mc.Close();
+						}
+						break;
+					case "confirmlist_mc":
+						if(LearnSkillsConfirmMenu_mc.confirmtype == LearnSkillsConfirmMenu.CONFIRM_TYPE_PERK) this.onLearnPerkConfirm();
+						else if(LearnSkillsConfirmMenu_mc.confirmtype == LearnSkillsConfirmMenu.CONFIRM_TYPE_SKILL)this.onLearnSkillsConfirm();
+						break;
+					default:
+						break;
+				}
+		}
+
+		private function onLearnPerkPressed(ttarget: Object): Boolean {
+		
+			this.LearnSkillsConfirmMenu_mc.confirmtype = LearnSkillsConfirmMenu.CONFIRM_TYPE_PERK;
+			this.LearnSkillsConfirmMenu_mc.Open(stage.focus,"$LEARN PERK?", ttarget);//PerkList_mc.SelectedEntry
+			stage.focus = this.LearnSkillsConfirmMenu_mc.confirmlist_mc;
+			this.PerkList_mc.disableInput = true;
+			this.PerkList_mc.disableSelection = true;
+			this.List_mc.disableInput = true;
+			this.List_mc.disableSelection = true;
+			SetButtons();
+		}
+		
+		private function onLearnPerkConfirm(): Boolean {
+		
+			stage.focus = this.LearnSkillsConfirmMenu_mc.prevFocus;
+			if (LearnSkillsConfirmMenu_mc.confirmlist_mc.selectedIndex == 0) {
+				try {
+					root.f4se.plugins.def_plugin.AddPerk(uint(LearnSkillsConfirmMenu_mc.tttarget.formid), uint(LearnSkillsConfirmMenu_mc.tttarget.qname));
+				} catch (e: Error) {
+					trace("Failed to call root.f4se.plugins.def_plugin.AddPerk()")
+				}
+			}
+			this.LearnSkillsConfirmMenu_mc.Close();
+			this.PerkList_mc.disableInput = false;
+			this.PerkList_mc.disableSelection = false;
+			this.List_mc.disableInput = false;
+			this.List_mc.disableSelection = false;
+			SetButtons();
+		}
+		
+		private function perkpressed(ttarget: Object): * {
+				if (ttarget.selectedEntry.iselig) {
+					this.onLearnPerkPressed(ttarget.selectedEntry);
+				}
+		}
+
+		public function onMenuKeyDown(param1: KeyboardEvent): * {
+			if (SPCount == 0 && PPCount == 0 && (param1.keyCode == Keyboard.ENTER) && !this.Intense_training_menu_mc.opened && !this.LearnSkillsConfirmMenu_mc.opened) // || param1.keyCode == Keyboard.E))
 			{
-				this.List_mc.selectedEntry.value +=param1;
-				this.SPCount-=param1
+				this.onAcceptPressed();
+				param1.stopPropagation();
+			}
+
+			if (stage.focus == this.List_mc) {
+				if (param1.keyCode == Keyboard.A) {
+					this.ModSelectedValue(-1);
+				} else if (param1.keyCode == Keyboard.D) {
+					this.ModSelectedValue(1);
+				} else if (param1.keyCode == Keyboard.W) {
+					this.List_mc.moveSelectionUp();
+				} else if (param1.keyCode == Keyboard.S) {
+					this.List_mc.moveSelectionDown();
+				}
+			} else if (stage.focus == this.PerkList_mc) {
+				if (param1.keyCode == Keyboard.W) {
+					this.PerkList_mc.moveSelectionUp();
+				} else if (param1.keyCode == Keyboard.S) {
+					this.PerkList_mc.moveSelectionDown();
+				}
+			} else if (stage.focus == this.LearnSkillsConfirmMenu_mc.confirmlist_mc) {
+				if (param1.keyCode == Keyboard.W) {
+					this.LearnSkillsConfirmMenu_mc.confirmlist_mc.moveSelectionUp();
+				} else if (param1.keyCode == Keyboard.S) {
+					this.LearnSkillsConfirmMenu_mc.confirmlist_mc.moveSelectionDown();
+				}
+			}
+		}
+
+		private function ModSelectedValue(param1: int): * {
+			atrace("value " + String(this.List_mc.selectedEntry.value));
+			atrace("basevalue " + String(this.List_mc.selectedEntry.basevalue));
+			atrace("param1 " + String(param1));
+			if (param1 < 0 && this.List_mc.selectedEntry.value > this.List_mc.selectedEntry.basevalue || param1 > 0 && this.uiSPCount > 0 && this.List_mc.selectedEntry.value < 100) {
+				this.List_mc.selectedEntry.value += param1;
+				this.SPCount -= param1
 				this.List_mc.UpdateList();
 			}
-      }
-	  
-      private function onArrowClick(param1:Event) : *
-      {
-         if(param1.target.name == "DecrementArrow")
-         {
-            this.ModSelectedValue(-1);
-         }
-         else
-         {
-            this.ModSelectedValue(1);
-         }
-      }
-	  
-  
-      private function ModListEntryValue(param1:int, param2:int, param3:Boolean) : *
-      {
-       /*  if(param2 < 0 && this.uiCurrPoints > 0 && this.List_mc.entryList[param1].value > 1 || param2 > 0 && this.uiCurrPoints < this.uiMaxPoints && this.List_mc.entryList[param1].value < 10)
+		}
+
+		private function onArrowClick(param1: Event): * {
+			if (param1.target.name == "DecrementArrow") {
+				this.ModSelectedValue(-1);
+			} else {
+				this.ModSelectedValue(1);
+			}
+		}
+
+
+		private function ModListEntryValue(param1: int, param2: int, param3: Boolean): * {
+			/*  if(param2 < 0 && this.uiCurrPoints > 0 && this.List_mc.entryList[param1].value > 1 || param2 > 0 && this.uiCurrPoints < this.uiMaxPoints && this.List_mc.entryList[param1].value < 10)
          {
             this.BGSCodeObj.modValue(param1,param2);
             this.uiCurrPoints = this.uiCurrPoints + param2;
@@ -836,91 +1004,61 @@
             }
          }*/
 
-      }
-	  
-	  
+		}
+
+
 		private function newlist(): * {
-			this._SampleList = new Array();
-			this._SampleList.push({
-				text: "Barter",
-				description: "Proficiency at trading and haggling. Also used to negotiate better quest rewards or occasionally as a bribe-like alternative to Speech.",
+			this._SampleList3 = new Array();
+			this._SampleList3.push({
+				text: "$Strength",
+				description: "None",
 				value: 5,
 				clipIndex: 0
 			});
-			this._SampleList.push({
-				text: "Crafting",
-				description: "Proficiency at repairing items and crafting items and ammunition.",
+			this._SampleList3.push({
+				text: "$Perception",
+				description: "None",
 				value: 5,
 				clipIndex: 1
 			});
-			this._SampleList.push({
-				text: "Energy Weapons",
-				description: "Proficiency at using energy-based weapons.",
+			this._SampleList3.push({
+				text: "$Endurance",
+				description: "None",
 				value: 5,
 				clipIndex: 2
 			});
-			this._SampleList.push({
-				text: "Explosives",
-				description: "Proficiency at using explosive weaponry, disarming mines, and crafting explosives.",
+			this._SampleList3.push({
+				text: "$Charisma",
+				description: "None",
 				value: 5,
 				clipIndex: 3
 			});
-			this._SampleList.push({
-				text: "Guns",
-				description: "Proficiency at using weapons that fire standard ammunition.",
+			this._SampleList3.push({
+				text: "$Intelligence",
+				description: "None",
 				value: 5,
 				clipIndex: 4
 			});
-			this._SampleList.push({
-				text: "Lockpick",
-				description: "Proficiency at picking locks.",
+			this._SampleList3.push({
+				text: "$Agility",
+				description: "None",
 				value: 5,
 				clipIndex: 5
 			});
-			this._SampleList.push({
-				text: "Medicine",
-				description: "Proficiency at using medical tools, drugs, and for crafting Doctor's Bags.",
+			this._SampleList3.push({
+				text: "$Luck",
+				description: "None",
 				value: 5,
 				clipIndex: 6
 			});
-			this._SampleList.push({
-				text: "Melee Weapons",
-				description: "Proficiency at using melee weapons.",
+			this._SampleList3.push({
+				text: "$Cancel",
+				description: "None",
 				value: 5,
 				clipIndex: 7
 			});
-			this._SampleList.push({
-				text: "Science",
-				description: "Proficiency at hacking terminals, recycling energy ammunition at workbenches, crafting chems, and many dialog checks.",
-				value: 5,
-				clipIndex: 8
-			});
-			this._SampleList.push({
-				text: "Sneak",
-				description: "Proficiency at remaining undetected and stealing.",
-				value: 5,
-				clipIndex: 9
-			});
-			this._SampleList.push({
-				text: "Speech",
-				description: "Proficiency at persuading others. Also used to negotiate for better quest rewards and to talk your way out of combat, convincing people to give up vital information and succeeding in multiple speech checks.",
-				value: 5,
-				clipIndex: 10
-			});
-			this._SampleList.push({
-				text: "Survival",
-				description: "Proficiency at cooking, making poisons, and crafting \"natural\" equipment and consumables. Also yields increased benefits from food.",
-				value: 5,
-				clipIndex: 11
-			});
-			this._SampleList.push({
-				text: "Unarmed",
-				description: "Proficiency at unarmed fighting.",
-				value: 5,
-				clipIndex: 12
-			});
 		}
-		
+
 		private function newlist1(): * {
 			this._SampleList1 = new Array();
 			this._SampleList1.push({
@@ -936,11 +1074,13 @@
 				clipIndex: 1
 			});
 		}
-		
-	  private function atrace(param1: String):*{
-	  if (!debugmode) {return};
-	  atf.appendText(param1+"\n");
-	  atf.scrollV=atf.maxScrollV;
-	  }
+
+		private function atrace(param1: String): * {
+			if (!debugmode) {
+				return
+			};
+			atf.appendText(param1 + "\n");
+			atf.scrollV = atf.maxScrollV;
+		}
 	}
 }

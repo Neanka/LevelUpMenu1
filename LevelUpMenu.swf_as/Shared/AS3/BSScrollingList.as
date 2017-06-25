@@ -90,11 +90,15 @@
 			this.iListItemsShown = 0;
 			this.fListHeight = 0;
 			this.iPlatform = 1;
+			if (this.name != "confirmlist_mc"){
 			sa1 = new Option_Scrollbar1();
 			sa1.rotation = 90;
 			sa1.x -= 7;
 			sa1.y += 13;
 			//this.sa1.Track_mc.width = 191;//this.border.height*this.border.scaleY;
+			this.addChild(sa1);
+			}
+
 
 				if (this.ScrollUp != null){
 					this.ScrollUp.visible = false;
@@ -102,7 +106,7 @@
 				if (this.ScrollDown != null){
 					this.ScrollDown.visible = false;
 				};			
-			this.addChild(sa1);
+
 			addEventListener(Option_Scrollbar1.VALUE_CHANGE, announceChangep);
 		}
 		private function announceChangep(e:Event):void {

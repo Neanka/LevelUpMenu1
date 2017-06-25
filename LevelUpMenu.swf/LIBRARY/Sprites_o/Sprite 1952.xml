@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Sprites_o/Sprite 1952" itemID="591c88d9-0000046d" linkageExportForAS="true" linkageExportForRS="true" linkageIdentifier="LevelUpMenu" linkageClassName="LevelUpMenu" sourceFlashFilepath="Sprite 1952" lastModified="1497446205" sourceItemID="00000000-ffffffff">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Sprites_o/Sprite 1952" itemID="591c88d9-0000046d" linkageExportForAS="true" linkageExportForRS="true" linkageIdentifier="LevelUpMenu" linkageClassName="LevelUpMenu" sourceFlashFilepath="Sprite 1952" lastModified="1498412521" sourceItemID="00000000-ffffffff">
   <timeline>
     <DOMTimeline name="Sprite 1952">
       <layers>
@@ -34,7 +34,39 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 821" color="#4F80FF" current="true" isSelected="true">
+        <DOMLayer name="SkillsConfirm" color="#FF800A" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="LearnSkillsConfirmMenu" name="LearnSkillsConfirmMenu_mc" selected="true">
+                  <matrix>
+                    <Matrix tx="470" ty="240.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="170" y="100"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="IT" color="#9933CC" autoNamed="false" visible="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Intense_training_menu" name="Intense_training_menu_mc">
+                  <matrix>
+                    <Matrix tx="70" ty="59.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="120" y="250"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 821" color="#4F80FF">
           <frames>
             <DOMFrame index="0" keyMode="8704">
               <elements>
@@ -91,7 +123,7 @@
                     </DOMTextRun>
                   </textRuns>
                 </DOMDynamicText>
-                <DOMDynamicText name="Reqs_tf" selected="true" fontRenderingMode="device" width="376" height="71.6" isSelectable="false" renderAsHTML="true" lineType="multiline">
+                <DOMDynamicText name="Reqs_tf" fontRenderingMode="device" width="376" height="71.6" isSelectable="false" renderAsHTML="true" lineType="multiline">
                   <matrix>
                     <Matrix tx="452" ty="357"/>
                   </matrix>
@@ -117,7 +149,7 @@
                     </DOMTextRun>
                   </textRuns>
                 </DOMDynamicText>
-                <DOMSymbolInstance libraryItemName="Sprites/Skills_List" name="PerkList_mc">
+                <DOMSymbolInstance libraryItemName="Sprites/perks list" name="PerkList_mc">
                   <matrix>
                     <Matrix tx="90.15" ty="111"/>
                   </matrix>
@@ -127,7 +159,7 @@
                 </DOMSymbolInstance>
                 <DOMDynamicText name="spec_tf" fontRenderingMode="device" top="17.95" width="477.95" height="29" isSelectable="false" renderAsHTML="true" lineType="multiline">
                   <matrix>
-                    <Matrix tx="52" ty="584.05"/>
+                    <Matrix tx="59" ty="584.05"/>
                   </matrix>
                   <textRuns>
                     <DOMTextRun>

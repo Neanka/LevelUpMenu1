@@ -1,6 +1,6 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Sprites/perks list" itemID="59367a42-000007a4" linkageExportForAS="true" linkageClassName="Perks_List" lastModified="1497634958">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="stats list" itemID="59480574-000007aa" linkageExportForAS="true" linkageClassName="Stats_List" lastModified="1497892438">
   <timeline>
-    <DOMTimeline name="perks list">
+    <DOMTimeline name="stats list">
       <layers>
         <DOMLayer name="Слой 1" color="#4F80FF" current="true" isSelected="true">
           <frames>
@@ -8,10 +8,10 @@
               <elements>
                 <DOMSymbolInstance libraryItemName="Sprites/Sprite 2" name="border" selected="true">
                   <matrix>
-                    <Matrix a="5.31005859375" d="6.24990844726563"/>
+                    <Matrix a="4.6875" d="6.25"/>
                   </matrix>
                   <transformationPoint>
-                    <Point/>
+                    <Point x="32" y="32"/>
                   </transformationPoint>
                   <color>
                     <Color alphaMultiplier="0"/>
