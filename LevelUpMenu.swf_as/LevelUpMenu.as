@@ -54,7 +54,11 @@
 		private const TYPE_CANCEL: int = 9;
 		
 		private var LearnSkillsButton: BSButtonHintData;
+		private var LearnPerkButton: BSButtonHintData;
 		private var CancelLearnSkillsButton: BSButtonHintData;
+		private var skillschanged: Boolean = false;
+		private var bskillsconfirmation: Boolean = false;
+		private var SPCountBase: int = 0;
 		
 		
 
@@ -100,6 +104,7 @@
 			LevelUpMenu._instance = this;
 			this.AcceptButton = new BSButtonHintData("$ACCEPT", "Enter", "PSN_A", "Xenon_A", 1, this.onAcceptPressed);
 			this.LearnSkillsButton = new BSButtonHintData("$LEARN SKILLS", "Enter", "PSN_A", "Xenon_A", 1, this.onLearnSkillsPressed);
+			this.LearnPerkButton = new BSButtonHintData("$LEARN PERK", "Enter", "PSN_A", "Xenon_A", 1, this.onLearnPerkButtonPressed);
 			this.CancelLearnSkillsButton = new BSButtonHintData("$CANCEL", "Tab", "PSN_B", "Xenon_B", 1, this.onCancelLearnSkillsPressed);
 			this.CancelButton = new BSButtonHintData("$CLOSE", "Tab", "PSN_B", "Xenon_B", 1, this.onCancelPressed);
 			this.PrevPerkButton = new BSButtonHintData("$PREV PERK", "Ctrl", "PSN_L1", "Xenon_L1", 1, this.onPrevPerk);
@@ -149,6 +154,14 @@
 		public static function get instance(): LevelUpMenu {
 			return _instance;
 		}
+		
+		public function applycolor(){
+			trace("colors applied");
+			var _loc3_: ColorTransform = this.ButtonHintBar_mc.transform.colorTransform;
+			for (var i:uint = 0; i < this.numChildren; i++) {
+				this.getChildAt(i).transform.colorTransform = _loc3_;
+			}
+		}
 
 		private function onListMouseOver(event: Event) {
 			if (!this.Intense_training_menu_mc.opened && !this.LearnSkillsConfirmMenu_mc.opened) {
@@ -161,6 +174,7 @@
 						this.List_mc.selectedIndex = -1;
 					};
 				};
+				SetButtons();
 			};
 		}
 
@@ -177,6 +191,8 @@
 			_loc1_.push(this.AcceptButton);
 			_loc1_.push(this.LearnSkillsButton);
 			_loc1_.push(this.CancelLearnSkillsButton);
+			_loc1_.push(this.LearnPerkButton);
+			
 			//_loc1_.push(this.CancelButton);
 			//  _loc1_.push(this.PrevPerkButton);
 			//   _loc1_.push(this.NextPerkButton);
@@ -224,21 +240,21 @@
 		public function qqStart(skills_array: Array, aSPCount: int, aPPCount: int, perks_array: Array, aspec_tf: String, IT_array: Array): * {
 
 			this.spec_tf.text = aspec_tf;
-			this.SPCount = aSPCount;
 			this.PPCount = aPPCount;
 
 			if (skills_array.length == 0 && loaded == 0) {
 				this.List_mc.visible = false;
 				this.bgholder_mc.width = 820;
 				this.x += 180;
+				this.LearnSkillsConfirmMenu_mc.x -= 180;
 				this.ButtonHintBar_mc.x -= 180;
 				//this.Intense_training_menu_mc.x -= 180;
 				this.freepoints_holder_mc.x -= 360;
 				this.freepoints_holder_mc.textField1.visible = false;
 				this.freepoints_holder_mc.countField1.visible = false;
-				this.freepoints_holder_mc.textField.y = 8;
-				this.freepoints_holder_mc.countField.y = 8;
-				loaded = 1;
+				this.freepoints_holder_mc.textField.y = 9;
+				this.freepoints_holder_mc.countField.y = 9;
+				
 			}
 
 			IT_array.push({
@@ -251,9 +267,14 @@
 			atrace("filling array finished");
 			var oldindex: int = this.PerkList_mc.selectedIndex;
 			this.PerkList_mc.selectedIndex = -1;
-			this.List_mc.entryList = skills_array;
-			this.List_mc.InvalidateData();
-			this.List_mc.selectedIndex = -1;
+			if (!skillschanged) {
+				this.SPCount = aSPCount;
+				this.SPCountBase = aSPCount;
+				this.List_mc.entryList = skills_array;
+				this.List_mc.InvalidateData();
+				this.List_mc.selectedIndex = -1;
+			}
+			//this.spec_tf.text = String(SPCount) + " " + String(SPCountBase);
 			this.PerkList_mc.entryList = perks_array;
 			this.PerkList_mc.InvalidateData();
 			if (oldindex < 0) {
@@ -261,7 +282,6 @@
 			} else {
 				this.PerkList_mc.selectedIndex = oldindex;
 			}
-			this.SetButtons();
 			//var _loc3_: ColorTransform = this.XPMeterHolder_mc.transform.colorTransform; //////////!!!!!!!!!!!!!!!!!!!!! CHECK THIS
 			//////////!!!!!!!!!!!!!!!!!!!!! CHECK THIS
 			//this.freepoints_holder_mc.transform.colorTransform = _loc3_; //////////!!!!!!!!!!!!!!!!!!!!! CHECK THIS
@@ -276,7 +296,9 @@
 			this.LearnSkillsConfirmMenu_mc.confirmlist_mc.entryList = yesno;
 			this.LearnSkillsConfirmMenu_mc.confirmlist_mc.InvalidateData();
 			this.LearnSkillsConfirmMenu_mc.confirmlist_mc.selectedIndex = 0;
-			stage.focus = this.PerkList_mc;
+			if (loaded == 0) stage.focus = this.PerkList_mc;
+			loaded = 1;
+			this.SetButtons();
 		}
 		public function onCodeObjDestruction(): * {
 			this.GridView_mc.codeObj = null;
@@ -308,7 +330,7 @@
 		public function set SPCount(param1: uint): * {
 			GlobalFunc.SetText(this.freepoints_holder_mc.countField1, String(param1), false);
 			this.uiSPCount = param1;
-			this.AcceptButton.ButtonDisabled = param1 != 0 && PPCount == 0;
+			//this.AcceptButton.ButtonDisabled = param1 != 0 && PPCount == 0;
 		}
 
 		public function get PPCount(): uint {
@@ -318,44 +340,11 @@
 		public function set PPCount(param1: uint): * {
 			GlobalFunc.SetText(this.freepoints_holder_mc.countField, String(param1), false);
 			this.uiPPCount = param1;
-			this.AcceptButton.ButtonDisabled = param1 != 0 && SPCount == 0;
+			//this.AcceptButton.ButtonDisabled = param1 != 0 && SPCount == 0;
 		}
 
 		public function set ratio16x10(param1: Boolean): * {
 			this.GridView_mc.ratio16x10 = param1;
-		}
-
-		public function ProcessUserEvent(param1: String, param2: Boolean): Boolean {
-			/*var _loc4_: Object = null;
-			var _loc3_: Boolean = this.GridView_mc.ProcessUserEvent(param1, param2);
-			if (!_loc3_) {
-				if (!param2) {
-					if (param1 == "Cancel") {
-						if (this._WasCancelPressRegistered) {
-							_loc3_ = this.onCancelPressed();
-						}
-						this._WasCancelPressRegistered = false;
-					} else if (param1 == "Accept" || param1 == "Activate") {
-						_loc4_ = this.GridView_mc.selectedPerkEntry;
-						if (_loc4_ != null) {
-							if (!this.bConfirming) {
-								this.TryToAcquirePerk(_loc4_);
-								_loc3_ = this.bConfirming;
-							} else {
-								_loc3_ = this.onAcceptPressed();
-							}
-						}
-					} else if (param1 == "PrevPerk" && this.PrevPerkButton.ButtonVisible && !this.PrevPerkButton.ButtonDisabled) {
-						this.onPrevPerk();
-					} else if (param1 == "NextPerk" && this.NextPerkButton.ButtonVisible && !this.NextPerkButton.ButtonDisabled) {
-						this.onNextPerk();
-					}
-				} else if (param1 == "Cancel") {
-					this._WasCancelPressRegistered = true;
-				}
-			}
-			return _loc3_;*/
-			return false;
 		}
 
 		protected function onGridItemPress(param1: Event): * {
@@ -395,7 +384,7 @@
 		private function onLearnSkillsPressed(): Boolean {
 		
 			this.LearnSkillsConfirmMenu_mc.confirmtype = LearnSkillsConfirmMenu.CONFIRM_TYPE_SKILL;
-			this.LearnSkillsConfirmMenu_mc.Open(stage.focus,"$SKILLS CONFIRMATION TEXT");
+			this.LearnSkillsConfirmMenu_mc.Open(stage.focus,"$LEARN SKILLS?");
 			stage.focus = this.LearnSkillsConfirmMenu_mc.confirmlist_mc;
 			this.PerkList_mc.disableInput = true;
 			this.PerkList_mc.disableSelection = true;
@@ -407,7 +396,23 @@
 		private function onLearnSkillsConfirm(): Boolean {
 		
 			stage.focus = this.LearnSkillsConfirmMenu_mc.prevFocus;
-			if (LearnSkillsConfirmMenu_mc.confirmlist_mc.selectedIndex == 0) this.LearnSkillsConfirmMenu_mc.Close();
+			if (LearnSkillsConfirmMenu_mc.confirmlist_mc.selectedIndex == 0)
+			{
+				var temparray: Array = new Array();
+				for each(var obj in this.List_mc.entryList) {
+					temparray.push({
+						iformid: obj.formid,
+						ivalue: obj.value
+					});
+				}
+				try {
+					skillschanged = false;
+					root.f4se.plugins.def_plugin.LearnSkills(temparray, SPCount - SPCountBase);
+				} catch (e: Error) {
+					trace("Failed to call root.f4se.plugins.def_plugin.LearnSkills()")
+				}
+			};
+			this.LearnSkillsConfirmMenu_mc.Close()
 			this.PerkList_mc.disableInput = false;
 			this.PerkList_mc.disableSelection = false;
 			this.List_mc.disableInput = false;
@@ -417,7 +422,13 @@
 		
 		
 		private function onCancelLearnSkillsPressed(): Boolean {
-
+			SPCount = SPCountBase;
+			for each(var obj in this.List_mc.entryList) {
+				obj.value = obj.basevalue;
+				this.List_mc.UpdateList();
+				skillschanged = false;
+				SetButtons();
+			}
 		}
 		
 		private function onCancelPressed(): Boolean {
@@ -561,6 +572,20 @@
 		}
 
 		private function SetButtons(): * {
+			if ( SPCountBase == 0 && PPCount == 0){
+				this.AcceptButton.ButtonDisabled = false;
+				this.AcceptButton.ButtonVisible = true;
+			} else {
+				this.AcceptButton.ButtonDisabled = true;
+				this.AcceptButton.ButtonVisible = false;
+			}
+			
+			this.LearnPerkButton.ButtonDisabled = !(PPCount > 0 && this.PerkList_mc.numListItems >0 && this.PerkList_mc.selectedIndex >-1 && this.PerkList_mc.selectedEntry.iselig);
+			this.LearnPerkButton.ButtonVisible = (stage.focus == this.PerkList_mc) && (PPCount != 0);
+			this.LearnSkillsButton.ButtonDisabled = !skillschanged;
+			this.LearnSkillsButton.ButtonVisible = skillschanged && (stage.focus == this.List_mc);
+			this.CancelLearnSkillsButton.ButtonDisabled = !skillschanged;
+			this.CancelLearnSkillsButton.ButtonVisible = skillschanged && (stage.focus == this.List_mc);
 			/*	var _loc1_: Object = this.GridView_mc.selectedPerkEntry;
 			if (this.bConfirming) {
 				this.AcceptButton.ButtonText = "$ACCEPT";
@@ -853,6 +878,7 @@
 
 
 			this.BGSCodeObj.playSound("UIMenuFocus");
+			SetButtons();
 		}
 
 
@@ -888,6 +914,9 @@
 							} else perkpressed(param1.target);
 						}
 						break;
+					case "List_mc":
+
+						break;
 					case "stats_list":
 						if (PPCount > 0) {
 							if (param1.target.selectedEntry.type != TYPE_CANCEL) perkpressed(param1.target);
@@ -895,6 +924,10 @@
 						}
 						break;
 					case "confirmlist_mc":
+						if (bskillsconfirmation) {
+							bskillsconfirmation = false;
+							break;
+						}
 						if(LearnSkillsConfirmMenu_mc.confirmtype == LearnSkillsConfirmMenu.CONFIRM_TYPE_PERK) this.onLearnPerkConfirm();
 						else if(LearnSkillsConfirmMenu_mc.confirmtype == LearnSkillsConfirmMenu.CONFIRM_TYPE_SKILL)this.onLearnSkillsConfirm();
 						break;
@@ -914,10 +947,14 @@
 			this.List_mc.disableSelection = true;
 			SetButtons();
 		}
+
+		private function onLearnPerkButtonPressed(): Boolean {
+			onLearnPerkPressed(this.PerkList_mc.entryList[this.PerkList_mc.selectedIndex]);
+		}
 		
 		private function onLearnPerkConfirm(): Boolean {
 		
-			stage.focus = this.LearnSkillsConfirmMenu_mc.prevFocus;
+			stage.focus = this.PerkList_mc;
 			if (LearnSkillsConfirmMenu_mc.confirmlist_mc.selectedIndex == 0) {
 				try {
 					root.f4se.plugins.def_plugin.AddPerk(uint(LearnSkillsConfirmMenu_mc.tttarget.formid), uint(LearnSkillsConfirmMenu_mc.tttarget.qname));
@@ -940,10 +977,18 @@
 		}
 
 		public function onMenuKeyDown(param1: KeyboardEvent): * {
-			if (SPCount == 0 && PPCount == 0 && (param1.keyCode == Keyboard.ENTER) && !this.Intense_training_menu_mc.opened && !this.LearnSkillsConfirmMenu_mc.opened) // || param1.keyCode == Keyboard.E))
-			{
-				this.onAcceptPressed();
-				param1.stopPropagation();
+			if (param1.keyCode == Keyboard.ENTER){
+				if ((skillschanged) && !this.Intense_training_menu_mc.opened && !this.LearnSkillsConfirmMenu_mc.opened && (stage.focus == this.List_mc))
+				{
+					onLearnSkillsPressed();
+					bskillsconfirmation = true;
+					param1.stopPropagation();
+				}
+				else if (SPCountBase == 0 && PPCount == 0 && !this.Intense_training_menu_mc.opened && !this.LearnSkillsConfirmMenu_mc.opened) // || param1.keyCode == Keyboard.E))
+				{
+					this.onAcceptPressed();
+					param1.stopPropagation();
+				}
 			}
 
 			if (stage.focus == this.List_mc) {
@@ -962,6 +1007,12 @@
 				} else if (param1.keyCode == Keyboard.S) {
 					this.PerkList_mc.moveSelectionDown();
 				}
+			}	else if (stage.focus == this.Intense_training_menu_mc.stats_list) {
+				if (param1.keyCode == Keyboard.W) {
+					this.Intense_training_menu_mc.stats_list.moveSelectionUp();
+				} else if (param1.keyCode == Keyboard.S) {
+					this.Intense_training_menu_mc.stats_list.moveSelectionDown();
+				}
 			} else if (stage.focus == this.LearnSkillsConfirmMenu_mc.confirmlist_mc) {
 				if (param1.keyCode == Keyboard.W) {
 					this.LearnSkillsConfirmMenu_mc.confirmlist_mc.moveSelectionUp();
@@ -969,6 +1020,42 @@
 					this.LearnSkillsConfirmMenu_mc.confirmlist_mc.moveSelectionDown();
 				}
 			}
+		}
+		
+		public function ProcessUserEvent(param1: String, param2: Boolean): Boolean {
+			if (param1 == "Cancel" && skillschanged){
+				onCancelLearnSkillsPressed();
+			}
+			/*var _loc4_: Object = null;
+			var _loc3_: Boolean = this.GridView_mc.ProcessUserEvent(param1, param2);
+			if (!_loc3_) {
+				if (!param2) {
+					if (param1 == "Cancel") {
+						if (this._WasCancelPressRegistered) {
+							_loc3_ = this.onCancelPressed();
+						}
+						this._WasCancelPressRegistered = false;
+					} else if (param1 == "Accept" || param1 == "Activate") {
+						_loc4_ = this.GridView_mc.selectedPerkEntry;
+						if (_loc4_ != null) {
+							if (!this.bConfirming) {
+								this.TryToAcquirePerk(_loc4_);
+								_loc3_ = this.bConfirming;
+							} else {
+								_loc3_ = this.onAcceptPressed();
+							}
+						}
+					} else if (param1 == "PrevPerk" && this.PrevPerkButton.ButtonVisible && !this.PrevPerkButton.ButtonDisabled) {
+						this.onPrevPerk();
+					} else if (param1 == "NextPerk" && this.NextPerkButton.ButtonVisible && !this.NextPerkButton.ButtonDisabled) {
+						this.onNextPerk();
+					}
+				} else if (param1 == "Cancel") {
+					this._WasCancelPressRegistered = true;
+				}
+			}
+			return _loc3_;*/
+			return false;
 		}
 
 		private function ModSelectedValue(param1: int): * {
@@ -979,6 +1066,8 @@
 				this.List_mc.selectedEntry.value += param1;
 				this.SPCount -= param1
 				this.List_mc.UpdateList();
+				skillschanged = (SPCount != SPCountBase);
+				SetButtons();
 			}
 		}
 

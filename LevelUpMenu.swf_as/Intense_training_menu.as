@@ -17,6 +17,8 @@
       }
 	  
 	  public function Open(){
+		stage.focus = this.stats_list;
+		this.stats_list.selectedIndex = 0;
 		visible = true;
 		opened = true;
 	  }

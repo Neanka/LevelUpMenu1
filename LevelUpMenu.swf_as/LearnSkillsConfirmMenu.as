@@ -34,8 +34,10 @@
 		if (ttarget) {
 			GlobalFunc.SetText(this.itemtext_tf,ttarget.text,false);
 			tttarget = ttarget;
+		} else {
+			GlobalFunc.SetText(this.itemtext_tf,"",false);
 		}
-
+		//confirmlist_mc.selectedIndex = -1;
 		visible = true;
 		opened = true;
 	  }
