@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Sprites_o/Sprite 1952" itemID="591c88d9-0000046d" linkageExportForAS="true" linkageExportForRS="true" linkageIdentifier="LevelUpMenu" linkageClassName="LevelUpMenu" sourceFlashFilepath="Sprite 1952" lastModified="1498412521" sourceItemID="00000000-ffffffff">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Sprites_o/Sprite 1952" itemID="591c88d9-0000046d" linkageExportForAS="true" linkageExportForRS="true" linkageIdentifier="LevelUpMenu" linkageClassName="LevelUpMenu" sourceFlashFilepath="Sprite 1952" lastModified="1498592213" sourceItemID="00000000-ffffffff">
   <timeline>
     <DOMTimeline name="Sprite 1952">
       <layers>
@@ -34,11 +34,11 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="SkillsConfirm" color="#FF800A" current="true" isSelected="true" autoNamed="false">
+        <DOMLayer name="SkillsConfirm" color="#FF800A" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="LearnSkillsConfirmMenu" name="LearnSkillsConfirmMenu_mc" selected="true">
+                <DOMSymbolInstance libraryItemName="LearnSkillsConfirmMenu" name="LearnSkillsConfirmMenu_mc">
                   <matrix>
                     <Matrix tx="470" ty="240.05"/>
                   </matrix>
@@ -66,7 +66,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 821" color="#4F80FF">
+        <DOMLayer name="Layer 821" color="#4F80FF" current="true" isSelected="true">
           <frames>
             <DOMFrame index="0" keyMode="8704">
               <elements>
@@ -96,7 +96,7 @@
                 </DOMSymbolInstance>
                 <DOMSymbolInstance libraryItemName="Sprite 149 - копия" name="freepoints_holder_mc">
                   <matrix>
-                    <Matrix tx="990" ty="645"/>
+                    <Matrix tx="1141.6" ty="965.15"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="120" y="22.5"/>
@@ -157,15 +157,15 @@
                     <Point x="169.9" y="247.9"/>
                   </transformationPoint>
                 </DOMSymbolInstance>
-                <DOMDynamicText name="spec_tf" fontRenderingMode="device" top="17.95" width="477.95" height="29" isSelectable="false" renderAsHTML="true" lineType="multiline">
+                <DOMDynamicText name="spec_tf" fontRenderingMode="device" top="17.95" width="495.95" height="30.2" isSelectable="false" renderAsHTML="true" lineType="multiline">
                   <matrix>
-                    <Matrix tx="59" ty="584.05"/>
+                    <Matrix tx="392" ty="584.05"/>
                   </matrix>
                   <textRuns>
                     <DOMTextRun>
                       <characters></characters>
                       <textAttrs>
-                        <DOMTextAttrs aliasText="false" autoKern="false" useScreenSpacing="true" lineHeight="26.35" size="20" bitmapSize="400" face="$MAIN_Font*" fillColor="#FFFFFF"/>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" useScreenSpacing="true" lineHeight="26.35" size="20" bitmapSize="400" face="$MAIN_Font*" fillColor="#FFFFFF"/>
                       </textAttrs>
                     </DOMTextRun>
                   </textRuns>
@@ -178,6 +178,58 @@
                     <Point x="10" y="10"/>
                   </transformationPoint>
                 </DOMSymbolInstance>
+                <DOMDynamicText name="textField" fontRenderingMode="device" width="307" height="25.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="69.2" ty="602"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$PERKPOINTS AVAILABLE</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineSpacing="-0.1" lineHeight="25.05" size="19" bitmapSize="380" face="$MAIN_Font*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+                <DOMDynamicText name="countField" fontRenderingMode="device" width="146" height="84.4" isSelectable="false" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="154.2" ty="513.6"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>28</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" useScreenSpacing="true" lineSpacing="-0.1" lineHeight="84.4" size="64" bitmapSize="1280" face="$MAIN_Font_Bold*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+                <DOMDynamicText name="textField1" fontRenderingMode="device" width="307" height="25.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="827" ty="602"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$SKILLPOINTS AVAILABLE</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineSpacing="-0.1" lineHeight="25.05" size="19" bitmapSize="380" face="$MAIN_Font*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+                <DOMDynamicText name="countField1" selected="true" fontRenderingMode="device" width="146" height="84.4" isSelectable="false" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="910" ty="513.6"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>29</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" useScreenSpacing="true" lineSpacing="-0.1" lineHeight="84.4" size="64" bitmapSize="1280" face="$MAIN_Font_Bold*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
               </elements>
             </DOMFrame>
           </frames>

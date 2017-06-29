@@ -42,6 +42,12 @@
 		public var freepoints_holder_mc: freepoints_holder;
 		public var VBHolder_mc: MovieClip;
 		public var Description_tf: TextField;
+		public var countField: TextField;
+		public var countField1: TextField;
+		public var textField: TextField;
+		public var textField1: TextField;
+		
+		
 		public var Reqs_tf: TextField;
 		public var atf: TextField;
 		//private const SkillsClipNameMap: Array = ["Barter", "Energy Weapons", "Explosives", "Guns", "LockPick", "Medicine", "Melee Weapons", "Repair", "Science", "Sneak", "Speech", "Survival", "Unarmed"];
@@ -250,8 +256,8 @@
 				this.ButtonHintBar_mc.x -= 180;
 				//this.Intense_training_menu_mc.x -= 180;
 				this.freepoints_holder_mc.x -= 360;
-				this.freepoints_holder_mc.textField1.visible = false;
-				this.freepoints_holder_mc.countField1.visible = false;
+				this.textField1.visible = false;
+				this.countField1.visible = false;
 				this.freepoints_holder_mc.textField.y = 9;
 				this.freepoints_holder_mc.countField.y = 9;
 				
@@ -328,7 +334,8 @@
 		}
 
 		public function set SPCount(param1: uint): * {
-			GlobalFunc.SetText(this.freepoints_holder_mc.countField1, String(param1), false);
+			//GlobalFunc.SetText(this.freepoints_holder_mc.countField1, String(param1), false);
+			GlobalFunc.SetText(this.countField1, String(param1), false);
 			this.uiSPCount = param1;
 			//this.AcceptButton.ButtonDisabled = param1 != 0 && PPCount == 0;
 		}
@@ -338,7 +345,8 @@
 		}
 
 		public function set PPCount(param1: uint): * {
-			GlobalFunc.SetText(this.freepoints_holder_mc.countField, String(param1), false);
+			//GlobalFunc.SetText(this.freepoints_holder_mc.countField, String(param1), false);
+			GlobalFunc.SetText(this.countField, String(param1), false);
 			this.uiPPCount = param1;
 			//this.AcceptButton.ButtonDisabled = param1 != 0 && SPCount == 0;
 		}

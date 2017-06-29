@@ -19,7 +19,7 @@
                     </DOMTextRun>
                   </textRuns>
                 </DOMDynamicText>
-                <DOMDynamicText name="textField1" fontRenderingMode="device" width="207.3" height="25.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                <DOMDynamicText name="textField1" selected="true" fontRenderingMode="device" width="207.3" height="25.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
                   <matrix>
                     <Matrix tx="7" ty="20"/>
                   </matrix>
