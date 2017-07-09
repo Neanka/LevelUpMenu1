@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="def_cb_button" itemID="5937b306-000007a5" lastModified="1496822592">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="def_cb_button" itemID="5937b306-000007a5" lastModified="1498794353">
   <timeline>
     <DOMTimeline name="def_cb_button">
       <layers>
@@ -6,7 +6,10 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMShape>
+                <DOMShape selected="true" isFloating="true">
+                  <matrix>
+                    <Matrix a="0.866668701171875" d="0.866668701171875" tx="1" ty="1"/>
+                  </matrix>
                   <fills>
                     <FillStyle index="1">
                       <SolidColor color="#FFFFFF"/>
@@ -22,7 +25,7 @@
                     </StrokeStyle>
                   </strokes>
                   <edges>
-                    <Edge fillStyle1="1" strokeStyle="1" edges="!13 0|287 0!287 0[300 0 300 13!300 13|300 288!300 288[300 300 287 300!287 300|13 300!13 300[0 300 0 288!0 288|0 13!0 13[0 0 13 0"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!13 0S6|287 0!287 0[300 0 300 13!300 13|300 288!300 288[300 300 287 300!287 300|13 300!13 300[0 300 0 288!0 288|0 13!0 13[0 0 13 0"/>
                   </edges>
                 </DOMShape>
               </elements>

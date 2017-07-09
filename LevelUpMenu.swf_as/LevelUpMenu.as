@@ -40,6 +40,8 @@
 		private var _SampleList1: Array;
 		private var _SampleList3: Array;
 		public var freepoints_holder_mc: freepoints_holder;
+		public var Options_mc: MovieClip;
+		public var gear_mc: MovieClip;
 		public var VBHolder_mc: MovieClip;
 		public var Description_tf: TextField;
 		public var countField: TextField;
@@ -54,7 +56,6 @@
 		private var _VBLoader: Loader;
 		private var uiSPCount: uint;
 		private var uiPPCount: uint;
-		public var filterCb: def_controls_cb;
 		private var loaded: uint = 0;
 		private const TYPE_INTENSETRAINING: int = 8;
 		private const TYPE_CANCEL: int = 9;
@@ -65,6 +66,7 @@
 		private var skillschanged: Boolean = false;
 		private var bskillsconfirmation: Boolean = false;
 		private var SPCountBase: int = 0;
+		public var _fF: int = int.MAX_VALUE;
 		
 		
 
@@ -139,7 +141,7 @@
 			addEventListener(KeyboardEvent.KEY_DOWN, this.onMenuKeyDown);
 			addEventListener(ArrowButton.MOUSE_UP, this.onArrowClick);
 			addEventListener(ItemList.MOUSE_OVER, this.onListMouseOver);
-			filterCb.addEventListener(MouseEvent.CLICK, this.onCbClick);
+			gear_mc.addEventListener(MouseEvent.CLICK, this.onGEARMCClick);
 			//---
 			Extensions.enabled = true;
 			TextFieldEx.setTextAutoSize(this.XPMeterHolder_mc.textField, TextFieldEx.TEXTAUTOSZ_SHRINK);
@@ -152,7 +154,8 @@
 			this.__setProp_PerkList_mc_MenuObj_PerkList_mc_0();
 			this.__setProp_Intense_training_menu_mc_MenuObj_Intense_training_menu_mc_0();
 			this.__setProp_LearnSkillsConfirmMenu_mc_MenuObj_LearnSkillsConfirmMenu_mc_0();
-			newlist1();
+			this.Options_mc.visible = false;
+			//newlist1();
 			//---
 
 		}
@@ -184,13 +187,6 @@
 			};
 		}
 
-		private function onCbClick(event: Event) {
-			filterCb.togglecheck();
-			this.PerkList_mc.filterer.itemFilter = filterCb.bChecked ? 3 : 1;
-			this.PerkList_mc.InvalidateData();
-			//	this.PerkList_mc.UpdateList();
-			this.PerkList_mc.selectedIndex = this.PerkList_mc.GetEntryFromClipIndex(0);
-		}
 
 		private function PopulateButtonBar(): void {
 			var _loc1_: Vector.<BSButtonHintData>= new Vector.<BSButtonHintData> ();
@@ -243,6 +239,20 @@
 			this.SetButtons();
 		}
 
+		public function addflag (afl: int) {
+			_fF |= afl;
+			this.PerkList_mc.filterer.itemFilter = _fF;
+			this.PerkList_mc.InvalidateData();
+			this.PerkList_mc.selectedIndex = this.PerkList_mc.GetEntryFromClipIndex(0);
+		}
+		
+		public function remflag (afl: int) {
+			_fF &= ~afl;
+			this.PerkList_mc.filterer.itemFilter = _fF;
+			this.PerkList_mc.InvalidateData();
+			this.PerkList_mc.selectedIndex = this.PerkList_mc.GetEntryFromClipIndex(0);
+		}
+		
 		public function qqStart(skills_array: Array, aSPCount: int, aPPCount: int, perks_array: Array, aspec_tf: String, IT_array: Array): * {
 
 			this.spec_tf.text = aspec_tf;
@@ -282,15 +292,13 @@
 			}
 			//this.spec_tf.text = String(SPCount) + " " + String(SPCountBase);
 			this.PerkList_mc.entryList = perks_array;
+			this.PerkList_mc.filterer.itemFilter = _fF;
 			this.PerkList_mc.InvalidateData();
 			if (oldindex < 0) {
 				this.PerkList_mc.selectedIndex = 0; //GetEntryFromClipIndex(0);
 			} else {
 				this.PerkList_mc.selectedIndex = oldindex;
 			}
-			//var _loc3_: ColorTransform = this.XPMeterHolder_mc.transform.colorTransform; //////////!!!!!!!!!!!!!!!!!!!!! CHECK THIS
-			//////////!!!!!!!!!!!!!!!!!!!!! CHECK THIS
-			//this.freepoints_holder_mc.transform.colorTransform = _loc3_; //////////!!!!!!!!!!!!!!!!!!!!! CHECK THIS
 	
 			var yesno:Array = new Array();
 			yesno.push({
@@ -306,6 +314,7 @@
 			loaded = 1;
 			this.SetButtons();
 		}
+		
 		public function onCodeObjDestruction(): * {
 			this.GridView_mc.codeObj = null;
 			this.BGSCodeObj = null;
@@ -386,6 +395,14 @@
 				temparray.push(obj.value);
 			}
 			root.f4se.SendExternalEvent("LevelUp::ReturnSkills", temparray);
+			try
+			{
+				root.f4se.AllowTextInput(false);
+			}
+			catch(e:Error)
+			{
+				trace("Failed to disable text input");
+			}
 			this.BGSCodeObj.CloseMenu();
 		}
 
@@ -410,7 +427,7 @@
 				for each(var obj in this.List_mc.entryList) {
 					temparray.push({
 						iformid: obj.formid,
-						ivalue: obj.value
+						ivalue: obj.value-obj.basevalue
 					});
 				}
 				try {
@@ -1102,7 +1119,10 @@
          }*/
 
 		}
-
+		
+		private function onGEARMCClick(event: Event) {
+			this.Options_mc.visible = !this.Options_mc.visible;
+		}
 
 		private function newlist(): * {
 			this._SampleList3 = new Array();

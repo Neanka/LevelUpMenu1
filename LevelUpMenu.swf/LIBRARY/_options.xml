@@ -1,0 +1,101 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="_options" itemID="59552420-000007b1" linkageExportForAS="true" linkageClassName="_options" lastModified="1498803201">
+  <timeline>
+    <DOMTimeline name="_options">
+      <layers>
+        <DOMLayer name="Слой 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="def_cb" name="filterCb">
+                  <matrix>
+                    <Matrix tx="280" ty="26"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="10" y="10"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="def_cb" name="S_cb">
+                  <transformationPoint>
+                    <Point x="47" y="10"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="def_cb" name="P_cb">
+                  <matrix>
+                    <Matrix tx="40"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="47" y="10"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="def_cb" name="E_cb">
+                  <matrix>
+                    <Matrix tx="80"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="47" y="10"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="def_cb" name="C_cb">
+                  <matrix>
+                    <Matrix tx="120"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="47" y="10"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="def_cb" name="I_cb">
+                  <matrix>
+                    <Matrix tx="160"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="47" y="10"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="def_cb" name="A_cb">
+                  <matrix>
+                    <Matrix tx="200"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="47" y="10"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="def_cb" name="L_cb">
+                  <matrix>
+                    <Matrix tx="240"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="47" y="10"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="def_cb" name="another_cb">
+                  <matrix>
+                    <Matrix tx="200" ty="26"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="10" y="10"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="filterbox" name="filter_mc" selected="true">
+                  <matrix>
+                    <Matrix tx="0.1" ty="23.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="114.5" y="13.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="def_cb" name="nonspec_cb">
+                  <matrix>
+                    <Matrix tx="280"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="47" y="10"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

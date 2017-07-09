@@ -1,0 +1,28 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="gear" itemID="595529a6-00000a2a" symbolType="graphic" lastModified="1498753454">
+  <timeline>
+    <DOMTimeline name="gear">
+      <layers>
+        <DOMLayer name="Слой 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFFFFF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!266 61|301 32!301 32|348 79!348 79|319 114!319 114|335 153!335 153|380 157!380 157|380 223!380 223|335 227!335 227|319 266!319 266|348 301!348 301|301 348!301 348|266 318!266 318|227 335!227 335|223 380!223 380|157 380!157 380|153 335
+!153 335|114 318!114 318|79 348!79 348|32 301!32 301|62 266!62 266|45 227!45 227|0 223!0 223|0 157!0 157|45 153!45 153|62 114!62 114|32 79!32 79|79 32!79 32|114 61!114 61|153 45!153 45|157 0!157 0|223 0!223 0|227 45!227 45|266 61!190
+ 142[170 142 156 156!156 156[142 170 142 190!142 190[142 210 156 224!156 224[170 238 190 238!190 238[210 238 224 224!224 224[238 210 238 190!238 190[238 170 224 156!224 156[210 142 190 142"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -10,6 +10,7 @@ package Shared.AS3
        
       
       private var iItemFilter:int;
+	  private var iItemFilterString:String;
       
       private var _filterArray:Array;
       
@@ -17,6 +18,7 @@ package Shared.AS3
       {
          super();
          this.iItemFilter = 4294967295;
+		 this.iItemFilterString = "";
       }
       
       public function get itemFilter() : int
@@ -33,6 +35,21 @@ package Shared.AS3
             dispatchEvent(new Event(FILTER_CHANGE,true,true));
          }
       }
+	  
+      public function get itemFilterString() : String
+      {
+         return this.iItemFilterString;
+      }
+      
+      public function set itemFilterString(param1:String) : *
+      {
+         var _loc2_:* = this.iItemFilterString != param1;
+         this.iItemFilterString = param1;
+         if(_loc2_ == true)
+         {
+            dispatchEvent(new Event(FILTER_CHANGE,true,true));
+         }
+      }
       
       public function get filterArray() : Array
       {
@@ -43,10 +60,18 @@ package Shared.AS3
       {
          this._filterArray = param1;
       }
+	  
+	  private function checktext(param1:Object): Boolean
+	  {
+		if (iItemFilterString == "") return true;
+		if (param1.text.toUpperCase().search(iItemFilterString.toUpperCase())>-1) return true;
+		return false;
+	  }
       
       public function EntryMatchesFilter(param1:Object) : Boolean
       {
-         return param1 != null && (!param1.hasOwnProperty("filterFlag") || (param1.filterFlag & this.iItemFilter) != 0);
+		 //if ((param1.filterFlag & 2 != 0) && (this.iItemFilter & 2 == 0)) return false;
+         return param1 != null && (!param1.hasOwnProperty("filterFlag") || (param1.filterFlag & this.iItemFilter) == param1.filterFlag) && checktext(param1);
       }
       
       public function GetPrevFilterMatch(param1:int) : int

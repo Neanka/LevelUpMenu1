@@ -1,0 +1,28 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="magnifier" itemID="5955cb91-00000b19" lastModified="1498794908">
+  <timeline>
+    <DOMTimeline name="magnifier">
+      <layers>
+        <DOMLayer name="Слой 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFFFFF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!61 60[0 121 0 207!0 207[0 293 61 353!61 353[122 414 207 414!207 414[277 414 334 370!334 370|362 398!362 398|359 402!359 402[352 410 352 420!352 420[352 431 359 438!359 438|513 592!513 592[521 600 532 600!532 600[543 600 550 592!550 592
+|593 549!593 549[601 542 601 531!601 531[601 521 593 513!593 513|439 359!439 359[432 352 421 352!421 352[410 352 402 359!402 359|399 362!399 362|371 334!371 334[414 277 414 207!414 207[414 121 354 60!354 60[293 0 207 0!207 0[121 0 61
+ 60!107 106[148 64 207 64!207 64[266 64 308 106!308 106[350 148 350 207!350 207[350 266 308 307!308 307[266 349 207 349!207 349[149 349 107 307!107 307[65 266 65 207!65 207[65 148 107 106"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

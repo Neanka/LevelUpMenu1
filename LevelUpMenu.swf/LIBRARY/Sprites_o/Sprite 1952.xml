@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Sprites_o/Sprite 1952" itemID="591c88d9-0000046d" linkageExportForAS="true" linkageExportForRS="true" linkageIdentifier="LevelUpMenu" linkageClassName="LevelUpMenu" sourceFlashFilepath="Sprite 1952" lastModified="1498592213" sourceItemID="00000000-ffffffff">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Sprites_o/Sprite 1952" itemID="591c88d9-0000046d" linkageExportForAS="true" linkageExportForRS="true" linkageIdentifier="LevelUpMenu" linkageClassName="LevelUpMenu" sourceFlashFilepath="Sprite 1952" lastModified="1498803357" sourceItemID="00000000-ffffffff">
   <timeline>
     <DOMTimeline name="Sprite 1952">
       <layers>
@@ -170,14 +170,6 @@
                     </DOMTextRun>
                   </textRuns>
                 </DOMDynamicText>
-                <DOMSymbolInstance libraryItemName="def_cb" name="filterCb">
-                  <matrix>
-                    <Matrix tx="284.05" ty="78"/>
-                  </matrix>
-                  <transformationPoint>
-                    <Point x="10" y="10"/>
-                  </transformationPoint>
-                </DOMSymbolInstance>
                 <DOMDynamicText name="textField" fontRenderingMode="device" width="307" height="25.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
                   <matrix>
                     <Matrix tx="69.2" ty="602"/>
@@ -217,7 +209,7 @@
                     </DOMTextRun>
                   </textRuns>
                 </DOMDynamicText>
-                <DOMDynamicText name="countField1" selected="true" fontRenderingMode="device" width="146" height="84.4" isSelectable="false" renderAsHTML="true">
+                <DOMDynamicText name="countField1" fontRenderingMode="device" width="146" height="84.4" isSelectable="false" renderAsHTML="true">
                   <matrix>
                     <Matrix tx="910" ty="513.6"/>
                   </matrix>
@@ -230,6 +222,22 @@
                     </DOMTextRun>
                   </textRuns>
                 </DOMDynamicText>
+                <DOMSymbolInstance libraryItemName="_options" name="Options_mc" selected="true">
+                  <matrix>
+                    <Matrix tx="80" ty="45.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="gear_button" name="gear_mc">
+                  <matrix>
+                    <Matrix tx="54.75" ty="24.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="9.5" y="9.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
               </elements>
             </DOMFrame>
           </frames>

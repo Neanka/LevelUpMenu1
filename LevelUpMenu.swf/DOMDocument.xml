@@ -4,22 +4,28 @@
           <DOMFolderItem name="Shapes" itemID="591b119d-000000de"/>
           <DOMFolderItem name="Shapes_o" itemID="591ddb37-000026f0"/>
           <DOMFolderItem name="Sprites" itemID="591ddc17-00002711"/>
-          <DOMFolderItem name="Sprites_o" itemID="591ddb33-000026ef" isExpanded="true"/>
+          <DOMFolderItem name="Sprites_o" itemID="591ddb33-000026ef"/>
      </folders>
      <fonts>
           <DOMFontItem name="$MAIN_Font_Bold" itemID="591c9678-00000797" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$MAIN_Font_Bold" linkageURL="fonts_en.swf" font="RobotoCondensed-Bold" size="0" id="2" sourceLastImported="1495045752" embedRanges="9999"/>
           <DOMFontItem name="$MAIN_Font" itemID="591c9397-00000794" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$MAIN_Font" linkageURL="fonts_en.swf" font="RobotoCondensed-Regular" size="0" id="1" sourceLastImported="1495045015" embedRanges="9999"/>
      </fonts>
      <symbols>
+          <Include href="_options.xml" itemID="59552420-000007b1" lastModified="1498803201"/>
           <Include href="Символ 1.xml" loadImmediate="false" itemID="591de4d4-0000277a" lastModified="1495131348"/>
           <Include href="Символ 2.xml" loadImmediate="false" itemID="592058dd-000007af" lastModified="1495292331"/>
           <Include href="bgholder.xml" itemID="591c9915-00000799" lastModified="1497815211"/>
+          <Include href="cb_bg_filler.xml" itemIcon="1" loadImmediate="false" itemID="595538a2-00000a69" lastModified="1498794647"/>
           <Include href="confirm list.xml" itemID="594fe446-00001741" lastModified="1498408779"/>
           <Include href="confirm list entry.xml" itemID="594fe3b6-00001737" lastModified="1498408786"/>
-          <Include href="def_cb.xml" itemID="5937b349-000007a8" lastModified="1496824177"/>
-          <Include href="def_cb_button.xml" loadImmediate="false" itemID="5937b306-000007a5" lastModified="1496822592"/>
+          <Include href="def_cb.xml" itemID="5937b349-000007a8" lastModified="1498757848"/>
+          <Include href="def_cb_button.xml" loadImmediate="false" itemID="5937b306-000007a5" lastModified="1498794353"/>
+          <Include href="filterbox.xml" itemID="59553970-00000a6f" lastModified="1498804055"/>
+          <Include href="gear.xml" itemIcon="1" loadImmediate="false" itemID="595529a6-00000a2a" lastModified="1498753454"/>
+          <Include href="gear_button.xml" loadImmediate="false" itemID="595529bc-00000a30" lastModified="1498794616"/>
           <Include href="Intense_training_menu.xml" itemID="5946d8f9-000007b3" lastModified="1497893610"/>
           <Include href="LearnSkillsConfirmMenu.xml" itemID="594fdfa4-0000171f" lastModified="1498415200"/>
+          <Include href="magnifier.xml" loadImmediate="false" itemID="5955cb91-00000b19" lastModified="1498794908"/>
           <Include href="Morphs_o/Morph 1704.xml" loadImmediate="false" itemID="591c88da-00000569" lastModified="1495042266"/>
           <Include href="Morphs_o/Morph 1707.xml" loadImmediate="false" itemID="591c88da-0000056a" lastModified="1495042266"/>
           <Include href="Shape 147 - копия.xml" itemIcon="1" loadImmediate="false" itemID="5946d8a7-000007b1" lastModified="1497898619"/>
@@ -1955,7 +1961,7 @@
           <Include href="Sprites_o/Sprite 1944.xml" itemID="591c88d9-0000046e" lastModified="1495046094"/>
           <Include href="Sprites_o/Sprite 1946.xml" loadImmediate="false" itemID="591c88da-000003f0" lastModified="1495042266"/>
           <Include href="Sprites_o/Sprite 1951.xml" loadImmediate="false" itemID="591c88da-000003ef" lastModified="1495042266"/>
-          <Include href="Sprites_o/Sprite 1952.xml" itemID="591c88d9-0000046d" lastModified="1498592213"/>
+          <Include href="Sprites_o/Sprite 1952.xml" itemID="591c88d9-0000046d" lastModified="1498803357"/>
           <Include href="Sprites/perks list.xml" itemID="59367a42-000007a4" lastModified="1497634958"/>
           <Include href="Sprites/perks list entry.xml" itemID="59367b12-000007ab" lastModified="1496743105"/>
           <Include href="Sprites/Skills_List.xml" itemID="5936b5d8-000007a5" lastModified="1496770553"/>
@@ -1986,25 +1992,25 @@
      </timelines>
      <PrinterSettings/>
      <publishHistory>
-          <PublishItem publishSize="3589143" publishTime="1498592251"/>
-          <PublishItem publishSize="3589143" publishTime="1498592220"/>
-          <PublishItem publishSize="3589142" publishTime="1498592104"/>
-          <PublishItem publishSize="3589138" publishTime="1498592044"/>
-          <PublishItem publishSize="3589134" publishTime="1498591912"/>
-          <PublishItem publishSize="3589137" publishTime="1498591893"/>
-          <PublishItem publishSize="3589095" publishTime="1498591510"/>
-          <PublishItem publishSize="3588988" publishTime="1498590609"/>
-          <PublishItem publishSize="3588981" publishTime="1498501102"/>
-          <PublishItem publishSize="3588980" publishTime="1498501012"/>
-          <PublishItem publishSize="3588951" publishTime="1498500811"/>
-          <PublishItem publishSize="3588938" publishTime="1498500652"/>
-          <PublishItem publishSize="3588934" publishTime="1498500584"/>
-          <PublishItem publishSize="3588938" publishTime="1498500464"/>
-          <PublishItem publishSize="3588927" publishTime="1498500388"/>
-          <PublishItem publishSize="3588936" publishTime="1498500334"/>
-          <PublishItem publishSize="3527380" publishTime="1498500313"/>
-          <PublishItem publishSize="3588876" publishTime="1498500078"/>
-          <PublishItem publishSize="3588180" publishTime="1498415128"/>
-          <PublishItem publishSize="3588175" publishTime="1498415008"/>
+          <PublishItem publishSize="3591205" publishTime="1498804064"/>
+          <PublishItem publishSize="3590871" publishTime="1498803723"/>
+          <PublishItem publishSize="3590839" publishTime="1498803642"/>
+          <PublishItem publishSize="3590824" publishTime="1498803414"/>
+          <PublishItem publishSize="3590856" publishTime="1498803363"/>
+          <PublishItem publishSize="3590824" publishTime="1498803240"/>
+          <PublishItem publishSize="3590744" publishTime="1498802351"/>
+          <PublishItem publishSize="3590617" publishTime="1498801217"/>
+          <PublishItem publishSize="3590579" publishTime="1498801075"/>
+          <PublishItem publishSize="3590611" publishTime="1498800982"/>
+          <PublishItem publishSize="3590586" publishTime="1498800933"/>
+          <PublishItem publishSize="3590591" publishTime="1498800883"/>
+          <PublishItem publishSize="3590540" publishTime="1498800695"/>
+          <PublishItem publishSize="3590571" publishTime="1498800588"/>
+          <PublishItem publishSize="3590450" publishTime="1498800115"/>
+          <PublishItem publishSize="3590429" publishTime="1498800090"/>
+          <PublishItem publishSize="3590445" publishTime="1498800040"/>
+          <PublishItem publishSize="3590446" publishTime="1498799920"/>
+          <PublishItem publishSize="3590444" publishTime="1498799885"/>
+          <PublishItem publishSize="3590429" publishTime="1498799402"/>
      </publishHistory>
 </DOMDocument>
