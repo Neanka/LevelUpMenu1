@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="filterbox" itemID="59553970-00000a6f" linkageExportForAS="true" linkageClassName="filterbox" lastModified="1498804055">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="filterbox" itemID="59553970-00000a6f" linkageExportForAS="true" linkageClassName="filterbox" lastModified="1514881653">
   <timeline>
     <DOMTimeline name="filterbox">
       <layers>
@@ -20,15 +20,15 @@
                     <Edge strokeStyle="1" edges="!66 0|3533 0!3533 0[3600 0 3600 57!3600 57|3600 442!3600 442[3600 500 3533 500!3533 500|66 500!66 500[0 500 0 442!0 442|0 57!0 57[0 0 66 0"/>
                   </edges>
                 </DOMShape>
-                <DOMDynamicText name="search_tf" selected="true" fontRenderingMode="device" left="6.25" width="148.05" height="19.75" isSelectable="false" renderAsHTML="true" lineType="multiline">
+                <DOMDynamicText name="search_tf" selected="true" fontRenderingMode="device" left="6.25" width="148.05" height="19.75" isSelectable="false" renderAsHTML="true">
                   <matrix>
                     <Matrix tx="20" ty="2"/>
                   </matrix>
                   <textRuns>
                     <DOMTextRun>
-                      <characters>Search</characters>
+                      <characters>$Search</characters>
                       <textAttrs>
-                        <DOMTextAttrs alignment="right" aliasText="false" autoKern="false" useScreenSpacing="true" lineHeight="19.75" size="15" bitmapSize="300" face="$MAIN_Font*" fillColor="#FFFFFF"/>
+                        <DOMTextAttrs alignment="right" aliasText="false" autoKern="false" useScreenSpacing="true" lineHeight="18" size="15" bitmapSize="300" face="$MAIN_Font*" fillColor="#FFFFFF"/>
                       </textAttrs>
                     </DOMTextRun>
                   </textRuns>

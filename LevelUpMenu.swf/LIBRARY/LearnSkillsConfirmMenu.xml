@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="LearnSkillsConfirmMenu" itemID="594fdfa4-0000171f" linkageExportForAS="true" linkageClassName="LearnSkillsConfirmMenu" lastModified="1498415200">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="LearnSkillsConfirmMenu" itemID="594fdfa4-0000171f" linkageExportForAS="true" linkageClassName="LearnSkillsConfirmMenu" lastModified="1514853901">
   <timeline>
     <DOMTimeline name="LearnSkillsConfirmMenu">
       <layers>
@@ -14,7 +14,7 @@
                     <Point x="120.65" y="23"/>
                   </transformationPoint>
                 </DOMSymbolInstance>
-                <DOMDynamicText name="confirmtext_tf" fontRenderingMode="device" width="296" height="26.35" isSelectable="false" renderAsHTML="true" lineType="multiline">
+                <DOMDynamicText name="confirmtext_tf" selected="true" fontRenderingMode="device" width="296" height="26.35" isSelectable="false" renderAsHTML="true" lineType="multiline">
                   <matrix>
                     <Matrix tx="22" ty="15.1"/>
                   </matrix>
@@ -22,7 +22,7 @@
                     <DOMTextRun>
                       <characters>$CONFIRMATION TEXT</characters>
                       <textAttrs>
-                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" useScreenSpacing="true" lineHeight="26.35" size="20" bitmapSize="400" face="$MAIN_Font_Bold*" fillColor="#FFFFFF"/>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" useScreenSpacing="true" lineHeight="24" size="20" bitmapSize="400" face="$MAIN_Font_Bold*" fillColor="#FFFFFF"/>
                       </textAttrs>
                     </DOMTextRun>
                   </textRuns>
@@ -35,7 +35,7 @@
                     <Point x="50" y="25"/>
                   </transformationPoint>
                 </DOMSymbolInstance>
-                <DOMDynamicText name="itemtext_tf" selected="true" fontRenderingMode="device" top="-20" width="296" height="26.35" isSelectable="false" renderAsHTML="true" lineType="multiline">
+                <DOMDynamicText name="itemtext_tf" fontRenderingMode="device" top="-20" width="296" height="26.35" isSelectable="false" renderAsHTML="true" lineType="multiline">
                   <matrix>
                     <Matrix tx="22" ty="74.05"/>
                   </matrix>
@@ -43,7 +43,7 @@
                     <DOMTextRun>
                       <characters>$ITEM TEXT</characters>
                       <textAttrs>
-                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" useScreenSpacing="true" lineHeight="26.35" size="20" bitmapSize="400" face="$MAIN_Font_Bold*" fillColor="#FFFFFF"/>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" useScreenSpacing="true" lineHeight="24" size="20" bitmapSize="400" face="$MAIN_Font_Bold*" fillColor="#FFFFFF"/>
                       </textAttrs>
                     </DOMTextRun>
                   </textRuns>

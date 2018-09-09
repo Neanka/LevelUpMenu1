@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="def_cb" itemID="5937b349-000007a8" linkageExportForAS="true" linkageClassName="def_controls_cb" lastModified="1498757848">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="def_cb" itemID="5937b349-000007a8" linkageExportForAS="true" linkageClassName="def_controls_cb" lastModified="1514883755">
   <timeline>
     <DOMTimeline name="def_cb">
       <layers>
@@ -49,7 +49,7 @@
                     <Point x="7.5" y="7.5"/>
                   </transformationPoint>
                 </DOMSymbolInstance>
-                <DOMDynamicText name="text_tf" fontRenderingMode="device" width="27.6" height="19.75" isSelectable="false" renderAsHTML="true" lineType="multiline">
+                <DOMDynamicText name="text_tf" selected="true" fontRenderingMode="device" width="27.6" height="19.75" isSelectable="false" renderAsHTML="true">
                   <matrix>
                     <Matrix tx="24.9" ty="-0.1"/>
                   </matrix>
@@ -57,7 +57,7 @@
                     <DOMTextRun>
                       <characters>X</characters>
                       <textAttrs>
-                        <DOMTextAttrs aliasText="false" autoKern="false" useScreenSpacing="true" lineHeight="19.75" size="15" face="$MAIN_Font*" fillColor="#FFFFFF"/>
+                        <DOMTextAttrs aliasText="false" autoKern="false" useScreenSpacing="true" lineHeight="18" size="15" face="$MAIN_Font*" fillColor="#FFFFFF"/>
                       </textAttrs>
                     </DOMTextRun>
                   </textRuns>

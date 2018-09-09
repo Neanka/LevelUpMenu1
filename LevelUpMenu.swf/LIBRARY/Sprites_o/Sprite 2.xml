@@ -5,13 +5,7 @@
         <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
           <frames>
             <DOMFrame index="0" keyMode="8704">
-              <elements>
-                <DOMSymbolInstance libraryItemName="Shapes_o/Shape 1" symbolType="graphic" loop="single frame">
-                  <transformationPoint>
-                    <Point/>
-                  </transformationPoint>
-                </DOMSymbolInstance>
-              </elements>
+              <elements/>
             </DOMFrame>
           </frames>
         </DOMLayer>

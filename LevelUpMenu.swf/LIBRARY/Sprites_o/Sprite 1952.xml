@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Sprites_o/Sprite 1952" itemID="591c88d9-0000046d" linkageExportForAS="true" linkageExportForRS="true" linkageIdentifier="LevelUpMenu" linkageClassName="LevelUpMenu" sourceFlashFilepath="Sprite 1952" lastModified="1498803357" sourceItemID="00000000-ffffffff">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Sprites_o/Sprite 1952" itemID="591c88d9-0000046d" linkageExportForAS="true" linkageExportForRS="true" linkageIdentifier="LevelUpMenu" linkageClassName="LevelUpMenu" sourceFlashFilepath="Sprite 1952" lastModified="1516329649" sourceItemID="00000000-ffffffff">
   <timeline>
     <DOMTimeline name="Sprite 1952">
       <layers>
@@ -24,7 +24,7 @@
               <elements>
                 <DOMSymbolInstance libraryItemName="Sprites_o/Sprite 1951" name="PerkInfo_mc">
                   <matrix>
-                    <Matrix tx="-2012.95" ty="511.05"/>
+                    <Matrix tx="1165" ty="89.3"/>
                   </matrix>
                   <transformationPoint>
                     <Point/>
@@ -34,11 +34,27 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="SkillsConfirm" color="#FF800A" autoNamed="false">
+        <DOMLayer name="InfoWindow" color="#9933CC" autoNamed="false" visible="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="LearnSkillsConfirmMenu" name="LearnSkillsConfirmMenu_mc">
+                <DOMSymbolInstance libraryItemName="InfoWindow" name="InfoWindow_mc">
+                  <matrix>
+                    <Matrix tx="270" ty="116"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="270" y="250"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="SkillsConfirm" color="#FF800A" autoNamed="false" visible="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="LearnSkillsConfirmMenu" name="LearnSkillsConfirmMenu_mc" selected="true">
                   <matrix>
                     <Matrix tx="470" ty="240.05"/>
                   </matrix>
@@ -54,9 +70,9 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Intense_training_menu" name="Intense_training_menu_mc">
+                <DOMSymbolInstance libraryItemName="Intense_training_menu" name="Intense_training_menu_mc" selected="true">
                   <matrix>
-                    <Matrix tx="70" ty="59.05"/>
+                    <Matrix tx="70" ty="112.8"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="120" y="250"/>
@@ -70,6 +86,19 @@
           <frames>
             <DOMFrame index="0" keyMode="8704">
               <elements>
+                <DOMDynamicText name="atf" fontRenderingMode="device" top="-116.2" width="364.95" height="250.95" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="848.4" ty="496.25"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters></characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" useScreenSpacing="true" lineHeight="21.6" size="18" bitmapSize="360" face="$MAIN_Font*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
                 <DOMSymbolInstance libraryItemName="Sprites_o/Sprite 149" name="XPMeterHolder_mc">
                   <matrix>
                     <Matrix tx="50" ty="645"/>
@@ -80,71 +109,50 @@
                 </DOMSymbolInstance>
                 <DOMSymbolInstance libraryItemName="bgholder" name="bgholder_mc">
                   <matrix>
-                    <Matrix tx="50" ty="21.1"/>
+                    <Matrix d="0.886184692382813" tx="50" ty="91.1"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="549.55" y="304.1"/>
                   </transformationPoint>
                 </DOMSymbolInstance>
-                <DOMSymbolInstance libraryItemName="Sprites/Skills_List" name="List_mc">
+                <DOMSymbolInstance libraryItemName="Sprites/Skills_List" name="List_mc" selected="true">
                   <matrix>
-                    <Matrix tx="846.4" ty="111"/>
+                    <Matrix tx="886.4" ty="111"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="169.9" y="251.45"/>
                   </transformationPoint>
                 </DOMSymbolInstance>
-                <DOMSymbolInstance libraryItemName="Sprite 149 - копия" name="freepoints_holder_mc">
-                  <matrix>
-                    <Matrix tx="1141.6" ty="965.15"/>
-                  </matrix>
-                  <transformationPoint>
-                    <Point x="120" y="22.5"/>
-                  </transformationPoint>
-                </DOMSymbolInstance>
                 <DOMSymbolInstance libraryItemName="Символ 1" name="VBHolder_mc">
                   <matrix>
-                    <Matrix tx="341" ty="13"/>
+                    <Matrix tx="400" ty="76.75"/>
                   </matrix>
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
                 </DOMSymbolInstance>
-                <DOMDynamicText name="Description_tf" fontRenderingMode="device" width="376" height="169.95" isSelectable="false" renderAsHTML="true" lineType="multiline">
+                <DOMDynamicText name="Description_tf" fontRenderingMode="device" width="436" height="128" isSelectable="false" renderAsHTML="true" lineType="multiline">
                   <matrix>
-                    <Matrix tx="452" ty="435"/>
+                    <Matrix tx="422" ty="435"/>
                   </matrix>
                   <textRuns>
                     <DOMTextRun>
                       <characters>$Description</characters>
                       <textAttrs>
-                        <DOMTextAttrs aliasText="false" autoKern="false" useScreenSpacing="true" lineHeight="26.35" size="20" bitmapSize="400" face="$MAIN_Font*" fillColor="#FFFFFF"/>
+                        <DOMTextAttrs aliasText="false" autoKern="false" useScreenSpacing="true" lineHeight="24" size="20" bitmapSize="400" face="$MAIN_Font*" fillColor="#FFFFFF"/>
                       </textAttrs>
                     </DOMTextRun>
                   </textRuns>
                 </DOMDynamicText>
-                <DOMDynamicText name="Reqs_tf" fontRenderingMode="device" width="376" height="71.6" isSelectable="false" renderAsHTML="true" lineType="multiline">
+                <DOMDynamicText name="Reqs_tf" fontRenderingMode="device" width="436" height="55" isSelectable="false" renderAsHTML="true" lineType="multiline">
                   <matrix>
-                    <Matrix tx="452" ty="357"/>
+                    <Matrix tx="422" ty="372"/>
                   </matrix>
                   <textRuns>
                     <DOMTextRun>
                       <characters>$Reqs for perks</characters>
                       <textAttrs>
-                        <DOMTextAttrs aliasText="false" autoKern="false" useScreenSpacing="true" lineHeight="26.35" size="20" bitmapSize="400" face="$MAIN_Font*" fillColor="#FFFFFF"/>
-                      </textAttrs>
-                    </DOMTextRun>
-                  </textRuns>
-                </DOMDynamicText>
-                <DOMDynamicText name="atf" fontRenderingMode="device" width="364.95" height="134.75" isSelectable="false">
-                  <matrix>
-                    <Matrix tx="848.4" ty="496.25"/>
-                  </matrix>
-                  <textRuns>
-                    <DOMTextRun>
-                      <characters></characters>
-                      <textAttrs>
-                        <DOMTextAttrs aliasText="false" useScreenSpacing="true" lineHeight="15.8" bitmapSize="240" face="$MAIN_Font*" fillColor="#FFFFFF"/>
+                        <DOMTextAttrs aliasText="false" autoKern="false" useScreenSpacing="true" lineHeight="24" size="20" bitmapSize="400" face="$MAIN_Font*" fillColor="#FFFFFF"/>
                       </textAttrs>
                     </DOMTextRun>
                   </textRuns>
@@ -157,28 +165,15 @@
                     <Point x="169.9" y="247.9"/>
                   </transformationPoint>
                 </DOMSymbolInstance>
-                <DOMDynamicText name="spec_tf" fontRenderingMode="device" top="17.95" width="495.95" height="30.2" isSelectable="false" renderAsHTML="true" lineType="multiline">
-                  <matrix>
-                    <Matrix tx="392" ty="584.05"/>
-                  </matrix>
-                  <textRuns>
-                    <DOMTextRun>
-                      <characters></characters>
-                      <textAttrs>
-                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" useScreenSpacing="true" lineHeight="26.35" size="20" bitmapSize="400" face="$MAIN_Font*" fillColor="#FFFFFF"/>
-                      </textAttrs>
-                    </DOMTextRun>
-                  </textRuns>
-                </DOMDynamicText>
                 <DOMDynamicText name="textField" fontRenderingMode="device" width="307" height="25.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
                   <matrix>
                     <Matrix tx="69.2" ty="602"/>
                   </matrix>
                   <textRuns>
                     <DOMTextRun>
-                      <characters>$PERKPOINTS AVAILABLE</characters>
+                      <characters>$PRKF_PP_AVAILABLE</characters>
                       <textAttrs>
-                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineSpacing="-0.1" lineHeight="25.05" size="19" bitmapSize="380" face="$MAIN_Font*" fillColor="#FFFFFF"/>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineSpacing="-0.1" lineHeight="22.8" size="19" bitmapSize="380" face="$MAIN_Font*" fillColor="#FFFFFF"/>
                       </textAttrs>
                     </DOMTextRun>
                   </textRuns>
@@ -191,40 +186,53 @@
                     <DOMTextRun>
                       <characters>28</characters>
                       <textAttrs>
-                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" useScreenSpacing="true" lineSpacing="-0.1" lineHeight="84.4" size="64" bitmapSize="1280" face="$MAIN_Font_Bold*" fillColor="#FFFFFF"/>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" useScreenSpacing="true" lineSpacing="-0.1" lineHeight="76.8" size="64" bitmapSize="1280" face="$MAIN_Font_Bold*" fillColor="#FFFFFF"/>
                       </textAttrs>
                     </DOMTextRun>
                   </textRuns>
                 </DOMDynamicText>
                 <DOMDynamicText name="textField1" fontRenderingMode="device" width="307" height="25.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
                   <matrix>
-                    <Matrix tx="827" ty="602"/>
+                    <Matrix tx="867" ty="602"/>
                   </matrix>
                   <textRuns>
                     <DOMTextRun>
-                      <characters>$SKILLPOINTS AVAILABLE</characters>
+                      <characters>$PRKF_SP_AVAILABLE</characters>
                       <textAttrs>
-                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineSpacing="-0.1" lineHeight="25.05" size="19" bitmapSize="380" face="$MAIN_Font*" fillColor="#FFFFFF"/>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineSpacing="-0.1" lineHeight="22.8" size="19" bitmapSize="380" face="$MAIN_Font*" fillColor="#FFFFFF"/>
                       </textAttrs>
                     </DOMTextRun>
                   </textRuns>
                 </DOMDynamicText>
                 <DOMDynamicText name="countField1" fontRenderingMode="device" width="146" height="84.4" isSelectable="false" renderAsHTML="true">
                   <matrix>
-                    <Matrix tx="910" ty="513.6"/>
+                    <Matrix tx="950" ty="513.6"/>
                   </matrix>
                   <textRuns>
                     <DOMTextRun>
                       <characters>29</characters>
                       <textAttrs>
-                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" useScreenSpacing="true" lineSpacing="-0.1" lineHeight="84.4" size="64" bitmapSize="1280" face="$MAIN_Font_Bold*" fillColor="#FFFFFF"/>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" useScreenSpacing="true" lineSpacing="-0.1" lineHeight="76.8" size="64" bitmapSize="1280" face="$MAIN_Font_Bold*" fillColor="#FFFFFF"/>
                       </textAttrs>
                     </DOMTextRun>
                   </textRuns>
                 </DOMDynamicText>
-                <DOMSymbolInstance libraryItemName="_options" name="Options_mc" selected="true">
+                <DOMDynamicText name="info_textField" fontRenderingMode="device" width="456" height="25.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
                   <matrix>
-                    <Matrix tx="80" ty="45.05"/>
+                    <Matrix tx="390.2" ty="602"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$info_textField</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineSpacing="-0.1" lineHeight="22.8" size="19" bitmapSize="380" face="$MAIN_Font*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+                <DOMSymbolInstance libraryItemName="_options" name="Options_mc">
+                  <matrix>
+                    <Matrix tx="458" ty="572.75"/>
                   </matrix>
                   <transformationPoint>
                     <Point/>
@@ -232,10 +240,18 @@
                 </DOMSymbolInstance>
                 <DOMSymbolInstance libraryItemName="gear_button" name="gear_mc">
                   <matrix>
-                    <Matrix tx="54.75" ty="24.3"/>
+                    <Matrix tx="431" ty="602.75"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="9.5" y="9.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="specials" name="specials_mc">
+                  <matrix>
+                    <Matrix tx="60" ty="12.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
                   </transformationPoint>
                 </DOMSymbolInstance>
               </elements>

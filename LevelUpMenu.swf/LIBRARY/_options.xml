@@ -75,7 +75,7 @@
                     <Point x="10" y="10"/>
                   </transformationPoint>
                 </DOMSymbolInstance>
-                <DOMSymbolInstance libraryItemName="filterbox" name="filter_mc" selected="true">
+                <DOMSymbolInstance libraryItemName="filterbox" name="filter_mc">
                   <matrix>
                     <Matrix tx="0.1" ty="23.8"/>
                   </matrix>
@@ -83,7 +83,7 @@
                     <Point x="114.5" y="13.35"/>
                   </transformationPoint>
                 </DOMSymbolInstance>
-                <DOMSymbolInstance libraryItemName="def_cb" name="nonspec_cb">
+                <DOMSymbolInstance libraryItemName="def_cb" name="nonspec_cb" selected="true">
                   <matrix>
                     <Matrix tx="280"/>
                   </matrix>

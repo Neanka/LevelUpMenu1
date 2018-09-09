@@ -1,7 +1,10 @@
 ﻿package  {
 	
+	import Shared.GlobalFunc;
 	import flash.display.MovieClip;
 	import flash.text.TextField;
+	import scaleform.gfx.Extensions;
+	import scaleform.gfx.TextFieldEx;
 	
 	
 	public class def_controls_cb extends MovieClip {
@@ -15,6 +18,8 @@
 			// constructor code
 			super();
 			//cb_x.visible = false;
+			Extensions.enabled = true;
+			TextFieldEx.setTextAutoSize(this.text_tf, TextFieldEx.TEXTAUTOSZ_SHRINK);
 			bChecked = true;
 		}		
 		public function togglecheck(): *
@@ -30,7 +35,9 @@
 		
 		public function settext(par1: String): *
 		{
-			text_tf.text = par1;
+			//
+			//text_tf.text = par1;
+			GlobalFunc.SetText(this.text_tf, par1, true);
 		}	
 		public function tunewidth(par1: int): *
 		{

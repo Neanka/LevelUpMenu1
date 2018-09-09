@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Shapes_o/Shape 147" itemID="591c88da-000003ec" symbolType="graphic" lastModified="1495042266">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Shapes_o/Shape 147" itemID="591c88da-000003ec" symbolType="graphic" lastModified="1514719025">
   <timeline>
     <DOMTimeline name="Shape 147">
       <layers>
@@ -6,14 +6,14 @@
           <frames>
             <DOMFrame index="0" keyMode="8704">
               <elements>
-                <DOMShape isFloating="true">
+                <DOMShape selected="true" isFloating="true">
                   <fills>
                     <FillStyle index="1">
-                      <SolidColor color="#333333" alpha="0.698039215686274"/>
+                      <SolidColor color="#333333" alpha="0.898039215686275"/>
                     </FillStyle>
                   </fills>
                   <edges>
-                    <Edge fillStyle1="1" edges="!4800 920|0 920!0 920|0 0!0 0|4800 0!4800 0|4800 920"/>
+                    <Edge fillStyle1="1" edges="!4800 920S2|0 920!0 920|0 0!0 0|4800 0!4800 0|4800 920"/>
                   </edges>
                 </DOMShape>
               </elements>

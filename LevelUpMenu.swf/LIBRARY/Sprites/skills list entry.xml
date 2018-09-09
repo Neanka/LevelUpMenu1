@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Sprites/skills list entry" itemID="5920125e-000007ad" linkageExportForAS="true" linkageClassName="Skills_ListEntry" sourceFlashFilepath="../../SPECIALMenu/SPECIALMenu.swf.fla" sourceLibraryItemHRef="Sprites/Sprite 7" sourceLastModified="1494947430" lastModified="1496742729" sourceItemID="00000000-ffffffff">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Sprites/skills list entry" itemID="5920125e-000007ad" linkageExportForAS="true" linkageClassName="Skills_ListEntry" sourceFlashFilepath="../../SPECIALMenu/SPECIALMenu.swf.fla" sourceLibraryItemHRef="Sprites/Sprite 7" sourceLastModified="1494947430" lastModified="1516329706" sourceItemID="00000000-ffffffff">
   <timeline>
     <DOMTimeline name="skills list entry">
       <layers>
@@ -46,13 +46,13 @@
                     <DOMTextRun>
                       <characters>10</characters>
                       <textAttrs>
-                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineHeight="26.35" size="20" bitmapSize="400" face="$MAIN_Font_Bold*" fillColor="#FFFFFF"/>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineHeight="24" size="20" bitmapSize="400" face="$MAIN_Font_Bold*" fillColor="#FFFFFF"/>
                       </textAttrs>
                     </DOMTextRun>
                     <DOMTextRun>
                       <characters>&#xD;</characters>
                       <textAttrs>
-                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineHeight="15.8" bitmapSize="240" face="$MAIN_Font_Bold*" fillColor="#FFFFFF"/>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineHeight="14.45" bitmapSize="240" face="$MAIN_Font_Bold*" fillColor="#FFFFFF"/>
                       </textAttrs>
                     </DOMTextRun>
                   </textRuns>
@@ -61,11 +61,11 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 3" color="#4F80FF" current="true" isSelected="true">
+        <DOMLayer name="Layer 3" color="#4F80FF">
           <frames>
             <DOMFrame index="0" keyMode="8704">
               <elements>
-                <DOMDynamicText name="textField" selected="true" fontRenderingMode="device" width="176.65" height="24" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                <DOMDynamicText name="textField" fontRenderingMode="device" width="176.65" height="24" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
                   <matrix>
                     <Matrix tx="24.35" ty="3"/>
                   </matrix>
@@ -73,13 +73,13 @@
                     <DOMTextRun>
                       <characters>Strength</characters>
                       <textAttrs>
-                        <DOMTextAttrs aliasText="false" autoKern="false" lineHeight="26.35" size="20" bitmapSize="400" face="$MAIN_Font_Bold*" fillColor="#FFFFFF"/>
+                        <DOMTextAttrs aliasText="false" autoKern="false" lineHeight="24" size="20" bitmapSize="400" face="$MAIN_Font_Bold*" fillColor="#FFFFFF"/>
                       </textAttrs>
                     </DOMTextRun>
                     <DOMTextRun>
                       <characters>&#xD;</characters>
                       <textAttrs>
-                        <DOMTextAttrs aliasText="false" autoKern="false" lineHeight="15.8" bitmapSize="240" face="$MAIN_Font_Bold*" fillColor="#FFFFFF"/>
+                        <DOMTextAttrs aliasText="false" autoKern="false" lineHeight="14.45" bitmapSize="240" face="$MAIN_Font_Bold*" fillColor="#FFFFFF"/>
                       </textAttrs>
                     </DOMTextRun>
                   </textRuns>
@@ -88,11 +88,11 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 1" color="#4F80FF">
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
           <frames>
             <DOMFrame index="0" keyMode="8704">
               <elements>
-                <DOMSymbolInstance libraryItemName="Sprites/Sprite 2" name="border" selected="true">
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 2" name="border">
                   <matrix>
                     <Matrix a="4.29571533203125" d="0.4375"/>
                   </matrix>
@@ -102,6 +102,14 @@
                   <color>
                     <Color alphaMultiplier="0"/>
                   </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 2" name="tag_mc" selected="true">
+                  <matrix>
+                    <Matrix a="0.15625" d="0.15625" tx="6" ty="9.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="32" y="32.65"/>
+                  </transformationPoint>
                 </DOMSymbolInstance>
               </elements>
             </DOMFrame>

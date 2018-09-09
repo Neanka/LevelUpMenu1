@@ -1,0 +1,230 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="specials" itemID="5a486b69-00000069" lastModified="1514716522">
+  <timeline>
+    <DOMTimeline name="specials">
+      <layers>
+        <DOMLayer name="Слой_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="s_tf" fontRenderingMode="device" width="150" height="25.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="121.35" ty="53.35"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$STRENGTH</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineSpacing="-0.1" lineHeight="22.8" size="19" bitmapSize="380" face="$MAIN_Font*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+                <DOMDynamicText name="sc_tf" fontRenderingMode="device" width="64.05" height="55.2" isSelectable="false" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="164.35" ty="-5.85"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>1</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" useScreenSpacing="true" lineSpacing="-0.1" lineHeight="55.2" size="46" bitmapSize="920" face="$MAIN_Font_Bold*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+                <DOMDynamicText name="p_tf" fontRenderingMode="device" width="150" height="25.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="275.35" ty="53.35"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$PERCEPTION</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineSpacing="-0.1" lineHeight="22.8" size="19" bitmapSize="380" face="$MAIN_Font*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+                <DOMDynamicText name="pc_tf" fontRenderingMode="device" width="64.05" height="55.2" isSelectable="false" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="318.35" ty="-5.85"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>1</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" useScreenSpacing="true" lineSpacing="-0.1" lineHeight="55.2" size="46" bitmapSize="920" face="$MAIN_Font_Bold*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+                <DOMDynamicText name="e_tf" fontRenderingMode="device" width="150" height="25.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="429.35" ty="53.35"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$ENDURANCE</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineSpacing="-0.1" lineHeight="22.8" size="19" bitmapSize="380" face="$MAIN_Font*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+                <DOMDynamicText name="ec_tf" fontRenderingMode="device" width="64.05" height="55.2" isSelectable="false" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="472.35" ty="-5.85"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>1</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" useScreenSpacing="true" lineSpacing="-0.1" lineHeight="55.2" size="46" bitmapSize="920" face="$MAIN_Font_Bold*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+                <DOMDynamicText name="c_tf" fontRenderingMode="device" width="150" height="25.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="583.35" ty="53.35"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$CHARISMA</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineSpacing="-0.1" lineHeight="22.8" size="19" bitmapSize="380" face="$MAIN_Font*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+                <DOMDynamicText name="cc_tf" fontRenderingMode="device" width="64.05" height="55.2" isSelectable="false" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="626.35" ty="-5.85"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>1</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" useScreenSpacing="true" lineSpacing="-0.1" lineHeight="55.2" size="46" bitmapSize="920" face="$MAIN_Font_Bold*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+                <DOMDynamicText name="i_tf" fontRenderingMode="device" width="150" height="25.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="737.35" ty="53.35"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineSpacing="-0.1" lineHeight="22.8" size="19" bitmapSize="380" face="$MAIN_Font*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                    <DOMTextRun>
+                      <characters>INTELLIGENCE</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineSpacing="-0.1" lineHeight="22.8" size="19" bitmapSize="380" face="$MAIN_Font*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+                <DOMDynamicText name="ic_tf" fontRenderingMode="device" width="64.05" height="55.2" isSelectable="false" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="780.35" ty="-5.85"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>1</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" useScreenSpacing="true" lineSpacing="-0.1" lineHeight="55.2" size="46" bitmapSize="920" face="$MAIN_Font_Bold*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+                <DOMDynamicText name="a_tf" fontRenderingMode="device" width="150" height="25.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="891.35" ty="53.35"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$AGILITY</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineSpacing="-0.1" lineHeight="22.8" size="19" bitmapSize="380" face="$MAIN_Font*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+                <DOMDynamicText name="ac_tf" fontRenderingMode="device" width="64.05" height="55.2" isSelectable="false" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="934.35" ty="-5.85"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>1</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" useScreenSpacing="true" lineSpacing="-0.1" lineHeight="55.2" size="46" bitmapSize="920" face="$MAIN_Font_Bold*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+                <DOMDynamicText name="l_tf" fontRenderingMode="device" width="150" height="25.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="1045.35" ty="53.35"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$LUCK</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineSpacing="-0.1" lineHeight="22.8" size="19" bitmapSize="380" face="$MAIN_Font*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+                <DOMDynamicText name="lc_tf" fontRenderingMode="device" width="64.05" height="55.2" isSelectable="false" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="1088.35" ty="-5.85"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>1</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" useScreenSpacing="true" lineSpacing="-0.1" lineHeight="55.2" size="46" bitmapSize="920" face="$MAIN_Font_Bold*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+                <DOMDynamicText name="lvl_tf" selected="true" fontRenderingMode="device" width="150" height="25.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="-32.65" ty="53.35"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$PRKF_LEVEL</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineSpacing="-0.1" lineHeight="22.8" size="19" bitmapSize="380" face="$MAIN_Font*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+                <DOMDynamicText name="lvlc_tf" fontRenderingMode="device" width="64.05" height="55.2" isSelectable="false" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="10.35" ty="-5.85"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>1</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" useScreenSpacing="true" lineSpacing="-0.1" lineHeight="51.4" size="46" bitmapSize="920" face="$MAIN_Font_Bold*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

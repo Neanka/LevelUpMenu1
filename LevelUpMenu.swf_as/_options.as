@@ -10,8 +10,8 @@
 	public class _options extends MovieClip {
 	
 	
-		private const filterFlag_elig:int = 1;
-		private const filterFlag_notelig:int = 2;
+		static public const filterFlag_elig:int = 1;
+		static public const filterFlag_notelig:int = 2;
 		private const filterFlag_highlvl:int = 4;
 		private const filterFlag_S:int = 8;
 		private const filterFlag_P:int = 16;
@@ -57,12 +57,12 @@
 			I_cb.settext("I");
 			A_cb.settext("A");
 			L_cb.settext("L");
-			nonspec_cb.settext("Non SPECIAL");
-			another_cb.settext("Another");
-			filterCb.settext("Ineligible");
-			nonspec_cb.tunewidth(50);
+			nonspec_cb.settext("$PRKF_NonSPECIAL");
+			another_cb.settext("$PRKF_Another");
+			filterCb.settext("$PRKF_Ineligible");
+			nonspec_cb.tunewidth(70);
 			another_cb.tunewidth(25);
-			filterCb.tunewidth(25);
+			filterCb.tunewidth(70);
 		}
 		
 		private function onFilterClick(event: Event) {
@@ -154,6 +154,7 @@
 			}
 			event.currentTarget.togglecheck();
 			if (event.currentTarget.bChecked) parent.addflag(tempflag) else parent.remflag(tempflag);
+			parent.SetButtons();
 		}
 		
 		

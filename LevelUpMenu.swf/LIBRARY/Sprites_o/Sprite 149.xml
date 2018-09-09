@@ -14,13 +14,13 @@
                     <DOMTextRun>
                       <characters>LEVEL  0</characters>
                       <textAttrs>
-                        <DOMTextAttrs aliasText="false" autoKern="false" lineSpacing="-0.1" lineHeight="25.05" size="19" bitmapSize="380" face="$MAIN_Font_Bold*" fillColor="#FFFFFF"/>
+                        <DOMTextAttrs aliasText="false" autoKern="false" lineSpacing="-0.1" lineHeight="22.8" size="19" bitmapSize="380" face="$MAIN_Font_Bold*" fillColor="#FFFFFF"/>
                       </textAttrs>
                     </DOMTextRun>
                     <DOMTextRun>
                       <characters></characters>
                       <textAttrs>
-                        <DOMTextAttrs aliasText="false" autoKern="false" lineSpacing="-0.1" lineHeight="15.8" bitmapSize="240" face="$MAIN_Font_Bold*" fillColor="#FFFFFF"/>
+                        <DOMTextAttrs aliasText="false" autoKern="false" lineSpacing="-0.1" lineHeight="14.45" bitmapSize="240" face="$MAIN_Font_Bold*" fillColor="#FFFFFF"/>
                       </textAttrs>
                     </DOMTextRun>
                   </textRuns>

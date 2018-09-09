@@ -1,0 +1,45 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="InfoWindow" itemID="5a4ad028-00000047" linkageExportForAS="true" linkageClassName="InfoWindow" lastModified="1514878622">
+  <timeline>
+    <DOMTimeline name="InfoWindow">
+      <layers>
+        <DOMLayer name="Слой_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="bg" name="bg_mc">
+                  <matrix>
+                    <Matrix a="2.17646789550781" d="2.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="170" y="100"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMDynamicText name="text_tf" fontRenderingMode="device" width="716.85" height="426.3" isSelectable="false" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="13.15" ty="14.7"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$TEXT</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" useScreenSpacing="true" lineHeight="19.2" size="16" bitmapSize="320" face="$MAIN_Font*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+                <DOMSymbolInstance libraryItemName="confirm list" name="confirmlist_mc" selected="true">
+                  <matrix>
+                    <Matrix tx="320" ty="418"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="50" y="35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

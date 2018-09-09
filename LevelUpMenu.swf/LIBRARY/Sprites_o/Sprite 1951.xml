@@ -1,126 +1,46 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Sprites_o/Sprite 1951" itemID="591c88da-000003ef" sourceFlashFilepath="Sprite 1951" lastModified="1495042266" sourceItemID="00000000-ffffffff">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Sprites_o/Sprite 1951" itemID="591c88da-000003ef" sourceFlashFilepath="Sprite 1951" lastModified="1513165798" sourceItemID="00000000-ffffffff">
   <timeline>
     <DOMTimeline name="Sprite 1951">
       <layers>
-        <DOMLayer name="Layer 8" color="#4F80FF" current="true" isSelected="true">
+        <DOMLayer name="Layer 8" color="#4F80FF">
           <frames>
             <DOMFrame index="0" keyMode="8704">
-              <elements>
-                <DOMDynamicText name="Confirm_tf" fontRenderingMode="device" width="495.05" height="26.4" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
-                  <matrix>
-                    <Matrix a="1.00187683105469" tx="402" ty="112"/>
-                  </matrix>
-                  <textRuns>
-                    <DOMTextRun>
-                      <characters>$ConfirmPerkSelect</characters>
-                      <textAttrs>
-                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineHeight="29" size="22" face="$MAIN_Font*" fillColor="#FFFFFF"/>
-                      </textAttrs>
-                    </DOMTextRun>
-                    <DOMTextRun>
-                      <characters>&#xD;</characters>
-                      <textAttrs>
-                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineHeight="15.8" face="$MAIN_Font*" fillColor="#FFFFFF"/>
-                      </textAttrs>
-                    </DOMTextRun>
-                  </textRuns>
-                </DOMDynamicText>
-              </elements>
+              <elements/>
             </DOMFrame>
           </frames>
         </DOMLayer>
         <DOMLayer name="Layer 6" color="#4F80FF">
           <frames>
             <DOMFrame index="0" keyMode="8704">
-              <elements>
-                <DOMSymbolInstance libraryItemName="Sprites_o/Sprite 132" name="StarHolder_mc">
-                  <matrix>
-                    <Matrix tx="524.95" ty="72"/>
-                  </matrix>
-                  <transformationPoint>
-                    <Point/>
-                  </transformationPoint>
-                </DOMSymbolInstance>
-              </elements>
+              <elements/>
             </DOMFrame>
           </frames>
         </DOMLayer>
         <DOMLayer name="Layer 5" color="#4F80FF">
           <frames>
             <DOMFrame index="0" keyMode="8704">
-              <elements>
-                <DOMDynamicText name="Reqs_tf" fontRenderingMode="device" width="296" height="21.1" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
-                  <matrix>
-                    <Matrix tx="497" ty="117"/>
-                  </matrix>
-                  <textRuns>
-                    <DOMTextRun>
-                      <characters>&#xD;</characters>
-                      <textAttrs>
-                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineHeight="15.8" face="$MAIN_Font*" fillColor="#FFFFFF"/>
-                      </textAttrs>
-                    </DOMTextRun>
-                  </textRuns>
-                </DOMDynamicText>
-              </elements>
+              <elements/>
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 4" color="#4F80FF">
+        <DOMLayer name="Layer 4" color="#4F80FF" current="true" isSelected="true">
           <frames>
             <DOMFrame index="0" keyMode="8704">
-              <elements>
-                <DOMDynamicText name="PerkName_tf" fontRenderingMode="device" width="746" height="35.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
-                  <matrix>
-                    <Matrix tx="272" ty="14.25"/>
-                  </matrix>
-                  <textRuns>
-                    <DOMTextRun>
-                      <characters>&#xD;</characters>
-                      <textAttrs>
-                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineHeight="15.8" face="$MAIN_Font*" fillColor="#FFFFFF"/>
-                      </textAttrs>
-                    </DOMTextRun>
-                  </textRuns>
-                </DOMDynamicText>
-              </elements>
+              <elements/>
             </DOMFrame>
           </frames>
         </DOMLayer>
         <DOMLayer name="Layer 3" color="#4F80FF">
           <frames>
             <DOMFrame index="0" keyMode="8704">
-              <elements>
-                <DOMDynamicText name="DescriptionText_tf" fontRenderingMode="device" width="744.55" height="50" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true" lineType="multiline">
-                  <matrix>
-                    <Matrix a="1.00187683105469" tx="277" ty="46"/>
-                  </matrix>
-                  <textRuns>
-                    <DOMTextRun>
-                      <characters>&#xD;</characters>
-                      <textAttrs>
-                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineHeight="15.8" face="$MAIN_Font*" fillColor="#FFFFFF"/>
-                      </textAttrs>
-                    </DOMTextRun>
-                  </textRuns>
-                </DOMDynamicText>
-              </elements>
+              <elements/>
             </DOMFrame>
           </frames>
         </DOMLayer>
         <DOMLayer name="Layer 1" color="#4F80FF">
           <frames>
             <DOMFrame index="0" keyMode="8704">
-              <elements>
-                <DOMSymbolInstance libraryItemName="Sprites_o/Sprite 1946" name="Background_mc">
-                  <matrix>
-                    <Matrix tx="115" ty="10"/>
-                  </matrix>
-                  <transformationPoint>
-                    <Point/>
-                  </transformationPoint>
-                </DOMSymbolInstance>
-              </elements>
+              <elements/>
             </DOMFrame>
           </frames>
         </DOMLayer>
